@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perlée｜華奢なパールジュエリーのブランドサイト（デモ）</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* 架空のパールジュエリーブランド Perlée のホームページ（Muse Web. 制作サンプル）。通販LP（../jewelry/）と世界観をそろえた多セクション構成 */
+:root{--ink:#5A4248;--soft:#977D83;--rose:#C9999F;--blush:#F3E4E1;--gold:#B99B66;--pearl:#FBF7F4;--line:#E8D9D5;--deep:#5E464C;--f-en:"Cormorant Garamond",serif;--f-jp:"Shippori Mincho","Hiragino Mincho ProN",serif;--f-sans:"Zen Kaku Gothic New",sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--pearl);color:var(--ink);font-family:var(--f-jp);letter-spacing:.06em;line-height:2;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.en{font-family:var(--f-en)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+/* header */
+.bar{background:var(--deep);color:#F2E6E3;font-family:var(--f-sans);font-size:11px;letter-spacing:.16em;text-align:center;padding:7px 12px}
+header{position:sticky;top:0;z-index:20;background:rgba(251,247,244,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:76px}
+header nav{display:flex;gap:26px;font-family:var(--f-en);font-size:13px;letter-spacing:.22em;color:var(--soft)}
+header nav.r{justify-content:flex-end}
+.logo{text-align:center;line-height:1}
+.logo b{display:block;font-family:var(--f-en);font-style:italic;font-weight:400;font-size:34px;letter-spacing:.04em}
+.logo small{display:block;font-family:var(--f-en);font-size:9px;letter-spacing:.5em;margin-right:-.5em;color:var(--soft);margin-top:4px}
+.ic{display:none}
+.ic svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.4}
+@media(max-width:860px){header .wrap{height:62px;padding:0 16px}header nav{display:none}.ic{display:flex;gap:14px}.ic.l{justify-content:flex-start}.ic.r{justify-content:flex-end}.logo b{font-size:27px}}
+/* hero：左に大きな写真・右に縦書き風のコピー */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;min-height:640px}
+.hero .ph{background:url(model.jpg) center 20%/cover}
+.hero .tx{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 40px;background:linear-gradient(180deg,var(--pearl),var(--blush))}
+.hero .k{font-family:var(--f-en);font-size:13px;letter-spacing:.5em;margin-right:-.5em;color:var(--gold)}
+.hero h1{font-weight:500;font-size:clamp(28px,3.2vw,40px);line-height:1.9;letter-spacing:.18em;margin:26px 0 22px}
+.hero p{font-size:14px;color:var(--soft);line-height:2.2}
+.btn{display:inline-block;margin-top:34px;border:1px solid var(--ink);padding:14px 46px;font-family:var(--f-en);font-size:14px;letter-spacing:.32em;transition:.4s}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.fill{background:var(--deep);color:#fff;border-color:var(--deep)}
+@media(max-width:860px){.hero{grid-template-columns:1fr;min-height:0}.hero .ph{height:460px}.hero .tx{padding:44px 24px 52px}.hero h1{font-size:25px}}
+/* 見出し */
+.ttl{text-align:center;margin-bottom:46px}
+.ttl .en{display:block;font-size:40px;font-weight:300;letter-spacing:.14em;line-height:1.2}
+.ttl .jp{display:block;font-size:13px;letter-spacing:.3em;color:var(--soft);margin-top:8px}
+.ttl::after{content:"";display:block;width:1px;height:34px;background:var(--gold);margin:18px auto 0}
+section{padding:110px 0}
+@media(max-width:860px){section{padding:76px 0}.ttl .en{font-size:31px}.ttl{margin-bottom:34px}}
+/* concept */
+.concept{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.concept .im{position:relative}
+.concept .im img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.concept .im::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid var(--gold);z-index:-1}
+.concept h2{font-weight:500;font-size:26px;line-height:1.9;letter-spacing:.14em;margin-bottom:24px}
+.concept p{font-size:14.5px;line-height:2.3;color:var(--soft)}
+.concept p+p{margin-top:18px}
+.sign{font-family:var(--f-en);font-style:italic;font-size:26px;color:var(--gold);margin-top:26px}
+@media(max-width:860px){.concept{grid-template-columns:1fr;gap:44px}.concept h2{font-size:22px}.concept .im{margin:0 0 0 12px}.concept .im::before{inset:-12px 12px 12px -12px}}
+/* collection：3つのシリーズ */
+.col{background:#fff}
+.series{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.series a{display:block;text-align:center}
+.series .ph{aspect-ratio:3/4;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.series .ph::after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.7)}
+.series .no{font-family:var(--f-en);font-size:13px;letter-spacing:.3em;color:var(--gold);margin-top:20px}
+.series h3{font-family:var(--f-en);font-weight:400;font-size:26px;letter-spacing:.12em;line-height:1.4}
+.series p{font-size:12.5px;color:var(--soft);line-height:1.9;margin-top:6px}
+@media(max-width:860px){.series{grid-template-columns:1fr;gap:40px}.series .ph{aspect-ratio:4/3}}
+/* items */
+.items{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 22px}
+.it .ph{aspect-ratio:1;background-size:cover;background-position:center;position:relative}
+.it .ph em{position:absolute;left:10px;top:10px;background:#fff;color:var(--rose);font-style:normal;font-family:var(--f-en);font-size:11px;letter-spacing:.2em;padding:2px 10px}
+.it .nm{font-size:13.5px;margin-top:14px;line-height:1.6}
+.it .pr{font-family:var(--f-en);font-size:19px;letter-spacing:.06em}
+.it .pr small{font-family:var(--f-sans);font-size:10px;color:var(--soft);margin-left:4px}
+.it .add{display:block;margin-top:10px;text-align:center;border:1px solid var(--line);font-family:var(--f-sans);font-size:11.5px;letter-spacing:.16em;padding:8px 0;background:#fff}
+.more{text-align:center;margin-top:50px}
+@media(max-width:860px){.items{grid-template-columns:1fr 1fr;gap:26px 14px}.it .nm{font-size:12.5px}}
+/* gift */
+.gift{position:relative;padding:0;background:var(--blush)}
+.gift .g{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.gift .ph{min-height:520px;background:url(gift.jpg) center/cover}
+.gift .tx{padding:90px 70px;display:flex;flex-direction:column;justify-content:center}
+.gift .en.k{font-size:15px;letter-spacing:.4em;color:var(--gold)}
+.gift h2{font-weight:500;font-size:28px;letter-spacing:.14em;line-height:1.8;margin:14px 0 20px}
+.gift ul{list-style:none;margin-top:22px;display:grid;gap:12px}
+.gift li{font-size:14px;display:flex;gap:14px;align-items:center}
+.gift li::before{content:"";width:22px;height:1px;background:var(--gold);flex:none}
+.gift p{font-size:14px;color:var(--soft);line-height:2.2}
+@media(max-width:860px){.gift .g{grid-template-columns:1fr}.gift .ph{min-height:300px}.gift .tx{padding:56px 26px 64px}.gift h2{font-size:22px}}
+/* shop */
+.shop{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.shop img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.shop dl{display:grid;grid-template-columns:7.5em 1fr;border-top:1px solid var(--line);font-size:14px}
+.shop dt,.shop dd{padding:16px 0;border-bottom:1px solid var(--line)}
+.shop dt{color:var(--soft);letter-spacing:.14em}
+.shop .note{font-size:12.5px;color:var(--soft);margin-top:18px;line-height:2}
+@media(max-width:860px){.shop{grid-template-columns:1fr;gap:34px}}
+/* faq */
+.faq{background:#fff}
+.qa{max-width:780px;margin:0 auto;border-top:1px solid var(--line)}
+.qa details{border-bottom:1px solid var(--line)}
+.qa summary{list-style:none;cursor:pointer;display:flex;gap:18px;align-items:baseline;padding:24px 4px;font-size:15px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .en{font-size:22px;color:var(--gold);flex:none}
+.qa summary::after{content:"+";margin-left:auto;font-family:var(--f-en);font-size:24px;color:var(--soft);line-height:1}
+.qa details[open] summary::after{content:"−"}
+.qa .a{padding:0 4px 26px 40px;font-size:14px;color:var(--soft);line-height:2.1}
+/* contact */
+.contact{text-align:center}
+.contact p{font-size:14px;color:var(--soft);line-height:2.2}
+.cbox{max-width:620px;margin:40px auto 0;display:grid;gap:14px;text-align:left}
+.f{background:#fff;border:1px solid var(--line);padding:14px 18px;font-family:var(--f-sans);font-size:13px;color:#B9A6AA;letter-spacing:.08em}
+.f.tall{height:130px}
+.contact .btn{margin-top:30px}
+footer{background:var(--deep);color:#EFE2DF;padding:70px 0 34px;text-align:center}
+footer .logo b{font-size:40px;color:#fff}
+footer .logo small{color:#D8C3BF}
+footer nav{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 30px;margin:34px 0 40px;font-family:var(--f-en);font-size:13px;letter-spacing:.24em}
+footer .cp{font-family:var(--f-sans);font-size:10.5px;letter-spacing:.16em;color:#C9B4B0}
+</style></head><body>
+
+<div class="bar">全国送料無料 ｜ ギフトラッピング無料 ｜ 30日間の返品保証</div>
+<header><div class="wrap">
+ <nav><a href="#concept">CONCEPT</a><a href="#collection">COLLECTION</a><a href="#items">ITEMS</a></nav>
+ <div class="ic l"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></div>
+ <a class="logo" href="#top"><b>Perlée</b><small>PEARL JEWELRY</small></a>
+ <nav class="r"><a href="#gift">GIFT</a><a href="#shop">SHOP</a><a href="#contact">CONTACT</a></nav>
+ <div class="ic r"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 016 0V8"/></svg></div>
+</div></header>
+
+<div class="hero" id="top">
+ <div class="ph" role="img" aria-label="パールのジュエリーを身につけた女性"></div>
+ <div class="tx">
+  <div class="k">PEARL JEWELRY ATELIER</div>
+  <h1>毎日に、<br>ひと粒の光を。</h1>
+  <p>大人の肌にやさしくなじむ、<br>華奢なパールジュエリー。<br>ひとつひとつ、手作業で仕上げています。</p>
+  <a class="btn" href="#collection">COLLECTION</a>
+ </div>
+</div>
+
+<section id="concept"><div class="wrap">
+ <div class="ttl"><span class="en">Concept</span><span class="jp">ペルレのこと</span></div>
+ <div class="concept">
+  <div class="im"><img src="model2.jpg" alt="パールのピアスを身につけた女性"></div>
+  <div>
+   <h2>主役になりすぎない、<br>でも、ちゃんと美しい。</h2>
+   <p>仕事の日も、休日も、特別な夜も。<br>毎日身につけたくなる「ちょうどいい華やかさ」を大切に、パールの選別から仕上げまで、小さなアトリエで丁寧につくっています。</p>
+   <p>肌なじみのよいピンクゴールドの地金と、やわらかな光をたたえたパール。<br>大人になったあなたに、そっと寄り添うジュエリーです。</p>
+   <div class="sign">Perlée atelier</div>
+  </div>
+ </div>
+</div></section>
+
+<section class="col" id="collection"><div class="wrap">
+ <div class="ttl"><span class="en">Collection</span><span class="jp">3つのシリーズ</span></div>
+ <div class="series">
+  <a href="#items"><div class="ph" style="background-image:url(p1.jpg)"></div><div class="no">SERIES 01</div><h3>Rosée</h3><p>朝露のようなひと粒パール。<br>はじめてのパールにも。</p></a>
+  <a href="#items"><div class="ph" style="background-image:url(p2.jpg)"></div><div class="no">SERIES 02</div><h3>Lumière</h3><p>耳もとで揺れる、やさしい光。<br>顔まわりを明るく。</p></a>
+  <a href="#items"><div class="ph" style="background-image:url(p3.jpg)"></div><div class="no">SERIES 03</div><h3>Blush</h3><p>ピンクストーンとパールの重ねづけ。<br>指先に、ほんのり色を。</p></a>
+ </div>
+</div></section>
+
+<section id="items"><div class="wrap">
+ <div class="ttl"><span class="en">Items</span><span class="jp">人気のアイテム</span></div>
+ <div class="items">
+  <div class="it"><div class="ph" style="background-image:url(p1.jpg)"><em>NEW</em></div><div class="nm">ひと粒パール ネックレス</div><div class="pr">¥12,800<small>税込</small></div><a class="add" href="#items">カートに入れる</a></div>
+  <div class="it"><div class="ph" style="background-image:url(p2.jpg)"><em>NEW</em></div><div class="nm">パール フープピアス</div><div class="pr">¥8,900<small>税込</small></div><a class="add" href="#items">カートに入れる</a></div>
+  <div class="it"><div class="ph" style="background-image:url(p3.jpg)"></div><div class="nm">ピンクストーン リング</div><div class="pr">¥9,800<small>税込</small></div><a class="add" href="#items">カートに入れる</a></div>
+  <div class="it"><div class="ph" style="background-image:url(p4.jpg)"></div><div class="nm">華奢チェーン ブレスレット</div><div class="pr">¥7,600<small>税込</small></div><a class="add" href="#items">カートに入れる</a></div>
+ </div>
+ <div class="more"><a class="btn" href="#items">VIEW ALL ITEMS</a></div>
+</div></section>
+
+<section class="gift" id="gift"><div class="g">
+ <div class="ph" role="img" aria-label="リボンをかけたギフトボックス"></div>
+ <div class="tx">
+  <div class="en k">GIFT WRAPPING</div>
+  <h2>大切な方への、<br>とっておきの贈りものに。</h2>
+  <p>お誕生日、記念日、自分へのご褒美にも。<br>すべてのご注文を、無料でギフト仕様にてお届けします。</p>
+  <ul><li>リボンつきのオリジナルボックス</li><li>手書き風メッセージカード</li><li>金額の入らない納品書</li></ul>
+ </div>
+</div></section>
+
+<section id="shop"><div class="wrap">
+ <div class="ttl"><span class="en">Shop</span><span class="jp">ショップ情報</span></div>
+ <div class="shop">
+  <img src="shop.jpg" alt="アトリエの店内">
+  <div>
+   <dl>
+    <dt>アトリエ</dt><dd>都内（完全予約制）</dd>
+    <dt>営業時間</dt><dd>11:00 – 18:00（火・水定休）</dd>
+    <dt>オンライン</dt><dd>24時間ご注文いただけます</dd>
+    <dt>お届け</dt><dd>ご注文から3〜5日でお届け</dd>
+    <dt>お支払い</dt><dd>クレジットカード・コンビニ払い・後払い</dd>
+   </dl>
+   <p class="note">アトリエでは、実際に手に取ってご試着いただけます。<br>ご来店の際は、お問い合わせフォームよりご予約ください。</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+ <div class="ttl"><span class="en">Q&amp;A</span><span class="jp">よくあるご質問</span></div>
+ <div class="qa">
+  <details open><summary><span class="en">Q.</span>金属アレルギーが心配です。</summary><div class="a">地金はニッケルフリーの素材を使用しています。ピアスはチタンポストへの変更も無料で承ります。</div></details>
+  <details><summary><span class="en">Q.</span>パールのお手入れ方法を教えてください。</summary><div class="a">身につけた後は、やわらかい布でやさしく拭いてから保管してください。お手入れ用クロスを同封しています。</div></details>
+  <details><summary><span class="en">Q.</span>サイズ直しはできますか？</summary><div class="a">リングのサイズ直しは、お届けから30日以内でしたら1回無料で承ります。</div></details>
+  <details><summary><span class="en">Q.</span>返品・交換はできますか？</summary><div class="a">未使用品に限り、お届けから30日以内でしたら返品・交換を承ります。</div></details>
+ </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+ <div class="ttl"><span class="en">Contact</span><span class="jp">お問い合わせ</span></div>
+ <p>商品について・アトリエのご予約・ギフトのご相談など、<br>お気軽にお問い合わせください。</p>
+ <div class="cbox" aria-hidden="true">
+  <div class="f">お名前</div><div class="f">メールアドレス</div><div class="f tall">お問い合わせ内容</div>
+ </div>
+ <a class="btn fill" href="#contact">SEND</a>
+</div></section>
+
+<footer>
+ <div class="logo"><b>Perlée</b><small>PEARL JEWELRY</small></div>
+ <nav><a href="#concept">CONCEPT</a><a href="#collection">COLLECTION</a><a href="#items">ITEMS</a><a href="#gift">GIFT</a><a href="#shop">SHOP</a><a href="#faq">Q&amp;A</a></nav>
+ <div class="cp">© Perlée ｜ Muse Web. 制作サンプル（架空のブランドです）</div>
+</footer>
+</body></html>

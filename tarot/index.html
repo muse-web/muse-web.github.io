@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcane Rose｜心を整えるタロット鑑定（デモ）</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Italiana&family=Shippori+Mincho+B1:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Arcane Rose LP：ミッドナイトブルー×シャンパンゴールド。タロットカードの額縁（二重線・角飾り）をモチーフに、左右対称の構成 */
+:root{--night:#1E2240;--night2:#272C4F;--gold:#CFB27C;--gold2:#E6D3A8;--rose:#D9AAA9;--ivory:#F6F0E6;--mist:#B9B6C9;--f-en:"Cinzel",serif;--f-it:"Italiana",serif;--f-jp:"Shippori Mincho B1",serif;--f-ui:"Zen Kaku Gothic New",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--ivory);font-family:var(--f-jp);line-height:2;letter-spacing:.06em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0;font-weight:400}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.ln{display:inline-block;white-space:nowrap}
+/* 星空のうっすらした背景 */
+.stars{background-image:radial-gradient(1px 1px at 12% 18%,rgba(230,211,168,.7) 50%,transparent 51%),radial-gradient(1px 1px at 78% 12%,rgba(230,211,168,.6) 50%,transparent 51%),radial-gradient(1.4px 1.4px at 42% 70%,rgba(230,211,168,.5) 50%,transparent 51%),radial-gradient(1px 1px at 90% 64%,rgba(230,211,168,.6) 50%,transparent 51%),radial-gradient(1px 1px at 24% 88%,rgba(230,211,168,.5) 50%,transparent 51%)}
+/* header */
+.hd{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:22px 30px}
+.logo{font-family:var(--f-en);font-size:20px;letter-spacing:.24em;color:var(--gold2);line-height:1.2}.logo small{display:block;font-family:var(--f-ui);font-size:9px;letter-spacing:.3em;color:var(--mist)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 30px;font-family:var(--f-ui);font-size:14px;letter-spacing:.16em;border-radius:2px;transition:background .3s,color .3s}
+.btn.gold{background:linear-gradient(135deg,#E6D3A8,#C2A36C);color:var(--night)}
+.btn.ol{border:1px solid var(--gold);color:var(--gold2)}.btn.ol:hover{background:rgba(207,178,124,.12)}
+.btn.sm{padding:9px 18px;font-size:12px}
+/* hero */
+.hero{position:relative;min-height:min(94vh,780px);display:flex;align-items:center;background:var(--night) url(hero.jpg) right center/cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,34,64,.96) 0,rgba(30,34,64,.82) 38%,rgba(30,34,64,.1) 70%)}
+.hero .in{position:relative;padding:110px 0 80px 7vw;max-width:640px}
+.hero .k{font-family:var(--f-en);font-size:12px;letter-spacing:.5em;color:var(--gold)}
+.hero h1{font-size:clamp(26px,3.5vw,44px);line-height:1.75;letter-spacing:.12em;margin:22px 0 14px}
+.hero .it{font-family:var(--f-it);font-size:clamp(22px,2.4vw,30px);color:var(--rose);letter-spacing:.06em}
+.hero p{color:var(--mist);font-size:15px;margin:24px 0 34px;max-width:450px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+/* section title with star ornament */
+section{padding:110px 0}
+.st{text-align:center;margin-bottom:58px}
+.st .orn{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--gold)}
+.st .orn::before,.st .orn::after{content:"";width:64px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.st .orn::after{transform:scaleX(-1)}
+.st .en{font-family:var(--f-en);font-size:13px;letter-spacing:.5em;color:var(--gold);margin-top:14px}
+.st h2{font-size:clamp(22px,2.6vw,30px);letter-spacing:.14em;margin-top:8px;line-height:1.7}
+.light{background:var(--ivory);color:var(--night)}
+.light .st h2{color:var(--night)}
+/* worries: card frames */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;border:1px solid var(--gold);padding:8px}
+.card .i{border:1px solid rgba(207,178,124,.45);padding:34px 22px 30px;text-align:center;min-height:100%}
+.card .num{font-family:var(--f-en);font-size:13px;letter-spacing:.3em;color:var(--gold)}
+.card p{font-size:16px;line-height:1.95;margin-top:12px}
+.card::before,.card::after{content:"✦";position:absolute;font-size:10px;color:var(--gold);background:var(--ivory);padding:0 6px;left:50%;translate:-50% 0}
+.card::before{top:-9px}.card::after{bottom:-9px}
+.worry .ans{text-align:center;margin-top:60px;font-size:clamp(17px,2vw,21px);line-height:2.1;letter-spacing:.1em}
+.worry .ans b{font-weight:600;background:linear-gradient(transparent 64%,#EED8D6 64%)}
+/* features */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.ft{text-align:center}
+.ft .ph{aspect-ratio:3/4;border-radius:200px 200px 4px 4px;overflow:hidden;border:1px solid var(--gold);padding:7px}
+.ft .ph img{width:100%;height:100%;object-fit:cover;border-radius:200px 200px 2px 2px}
+.ft h3{font-size:19px;letter-spacing:.12em;margin:4px 0 8px}.ft .en{font-family:var(--f-it);color:var(--rose);font-size:20px;margin-top:20px}
+.ft p{font-size:14px;color:var(--mist);line-height:1.95}
+/* menu */
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:920px;margin:0 auto}
+.mn{border:1px solid var(--gold);padding:8px;background:rgba(255,255,255,.02)}
+.mn .i{border:1px solid rgba(207,178,124,.35);padding:30px 30px 26px}
+.mn .tp{font-family:var(--f-en);font-size:12px;letter-spacing:.3em;color:var(--gold)}
+.mn h3{font-size:20px;letter-spacing:.12em;margin:6px 0 14px}
+.mn .row{display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed rgba(207,178,124,.35);padding:10px 0;font-size:15px}
+.mn .row b{font-family:var(--f-en);font-weight:400;font-size:22px;color:var(--gold2)}.mn .row b small{font-family:var(--f-ui);font-size:11px;color:var(--mist);margin-left:4px}
+.mn p{font-size:13px;color:var(--mist);margin-top:8px;line-height:1.9}
+.mn.rec{background:linear-gradient(160deg,rgba(217,170,169,.16),rgba(255,255,255,.02))}
+.mn .badge{display:inline-block;font-family:var(--f-ui);font-size:11px;letter-spacing:.14em;color:var(--night);background:var(--rose);padding:1px 10px;margin-left:10px;vertical-align:middle}
+.note{text-align:center;font-family:var(--f-ui);font-size:12px;color:var(--mist);margin-top:26px}
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fl{text-align:center;padding:28px 14px;border-top:1px solid var(--gold)}
+.fl .n{font-family:var(--f-en);font-size:30px;color:var(--gold)}
+.fl h3{font-size:17px;letter-spacing:.1em;margin:4px 0 8px}.fl p{font-size:13px;color:#5D5C73;line-height:1.9}
+/* voice */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.vo{background:var(--night2);padding:32px 28px;border-radius:2px;position:relative}
+.vo::before{content:"✦";color:var(--gold);font-size:14px}
+.vo p{font-size:15px;line-height:2.05;margin:12px 0 16px}
+.vo .who{font-family:var(--f-ui);font-size:12px;letter-spacing:.12em;color:var(--mist)}
+/* faq */
+.faq{max-width:840px;margin:0 auto}
+details{border-bottom:1px solid #D9CDB8}
+summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:baseline;padding:20px 4px;font-size:16px}
+summary::-webkit-details-marker{display:none}
+summary .q{font-family:var(--f-en);color:#B08F55}
+summary::after{content:"✦";margin-left:auto;color:#B08F55;font-size:12px;transition:rotate .4s}
+details[open] summary::after{rotate:45deg}
+details p{padding:0 4px 22px 30px;font-size:14px;color:#5D5C73}
+/* cta */
+.cta{text-align:center;padding:120px 0;background:linear-gradient(rgba(30,34,64,.72),rgba(30,34,64,.86)),url(room.jpg) center/cover}
+.cta .it{font-family:var(--f-it);font-size:clamp(30px,4vw,46px);color:var(--gold2)}
+.cta h2{font-size:clamp(19px,2.2vw,24px);letter-spacing:.14em;margin:12px 0 32px}
+.cta .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta small{display:block;margin-top:24px;font-family:var(--f-ui);font-size:12px;color:var(--mist);letter-spacing:.08em}
+.disc{font-family:var(--f-ui);font-size:11px;color:var(--mist);text-align:center;padding:26px 20px 0;line-height:1.9}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:22px 30px 26px;font-family:var(--f-ui);font-size:11px;letter-spacing:.1em;color:var(--mist)}
+@media(max-width:760px){
+ .hd{padding:16px 18px}.hd .btn{display:none}
+ .hero{min-height:auto;align-items:flex-end;background-size:auto 58%;background-position:72% top}
+ .hero::before{background:linear-gradient(180deg,rgba(30,34,64,0) 24%,rgba(30,34,64,.9) 44%,var(--night) 56%)}
+ .hero .in{padding:300px 22px 60px}.hero h1{font-size:24px;letter-spacing:.08em}
+ section{padding:76px 0}.cards,.feat,.menu,.voices{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}
+ .ft .ph{max-width:300px;margin:0 auto}
+ .st h2{font-size:21px;letter-spacing:.08em}
+ .mn .i{padding:26px 20px 22px}
+ .cta h2{font-size:17px;letter-spacing:.06em}
+}
+</style></head><body>
+
+<header class="hd"><a class="logo" href="#top">ARCANE ROSE<small>TAROT READING</small></a><a class="btn ol sm" href="#cta">ご予約</a></header>
+
+<div class="hero stars" id="top"><div class="in">
+ <div class="k">TAROT READING SALON</div>
+ <h1><span class="ln">迷ったときに、</span><br><span class="ln">そっと開くカードを。</span></h1>
+ <div class="it">— a quiet time for your heart</div>
+ <p>恋愛・お仕事・人間関係。言葉にしにくい気持ちを、タロットカードを手がかりに一緒に整理していく、大人のための鑑定サロンです。</p>
+ <div class="ctas"><a class="btn gold" href="#cta">初回鑑定を予約する</a><a class="btn ol" href="#menu">メニューを見る</a></div>
+</div></div>
+
+<section class="light worry"><div class="wrap">
+ <div class="st"><div class="orn">✦</div><div class="en">WORRIES</div><h2>こんな気持ち、抱えていませんか</h2></div>
+ <div class="cards">
+  <div class="card"><div class="i"><div class="num">I</div><p>大切な人の気持ちが<br>わからなくて、不安になる</p></div></div>
+  <div class="card"><div class="i"><div class="num">II</div><p>このままの働き方でいいのか、<br>ふと立ち止まってしまう</p></div></div>
+  <div class="card"><div class="i"><div class="num">III</div><p>誰かに話したいけれど、<br>身近な人には相談しにくい</p></div></div>
+ </div>
+ <p class="ans">答えを決めつけるのではなく、<br><b>「いまの自分の気持ち」</b>に気づくための時間を。</p>
+</div></section>
+
+<section class="stars"><div class="wrap">
+ <div class="st"><div class="orn">✦</div><div class="en">FEATURES</div><h2>Arcane Rose の鑑定</h2></div>
+ <div class="feat">
+  <div class="ft"><div class="ph"><img src="stone.jpg" alt="水晶とタロットカード"></div><div class="en">Gentle words</div><h3>やさしい言葉で</h3><p>こわいことを言うための鑑定ではありません。カードの意味を、前向きなヒントとしてお伝えします。</p></div>
+  <div class="ft"><div class="ph"><img src="online.jpg" alt="オンライン鑑定の様子"></div><div class="en">Online / Salon</div><h3>オンラインでも対面でも</h3><p>ご自宅からビデオ通話やチャットで。落ち着いた鑑定ルームでの対面鑑定もお選びいただけます。</p></div>
+  <div class="ft"><div class="ph"><img src="hold.jpg" alt="カードを手にする女性"></div><div class="en">Your own pace</div><h3>あなたのペースで</h3><p>話したいことがまとまっていなくても大丈夫。ゆっくり言葉にしていきましょう。</p></div>
+ </div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+ <div class="st"><div class="orn">✦</div><div class="en">MENU</div><h2>鑑定メニューと料金</h2></div>
+ <div class="menu">
+  <div class="mn"><div class="i"><div class="tp">ONLINE</div><h3>オンライン鑑定</h3>
+   <div class="row"><span>ビデオ・チャット 30分</span><b>¥5,500<small>税込</small></b></div>
+   <div class="row"><span>ビデオ・チャット 60分</span><b>¥9,900<small>税込</small></b></div>
+   <p>Zoom・LINE通話・チャットからお選びいただけます。</p></div></div>
+  <div class="mn rec"><div class="i"><div class="tp">SALON</div><h3>対面鑑定<span class="badge">おすすめ</span></h3>
+   <div class="row"><span>鑑定ルーム 60分</span><b>¥11,000<small>税込</small></b></div>
+   <div class="row"><span>鑑定ルーム 90分</span><b>¥15,400<small>税込</small></b></div>
+   <p>ハーブティーとお菓子をご用意して、ゆったりお迎えします。</p></div></div>
+  <div class="mn"><div class="i"><div class="tp">LETTER</div><h3>メール鑑定</h3>
+   <div class="row"><span>1テーマ</span><b>¥4,400<small>税込</small></b></div>
+   <p>3日以内に、カードの写真つきでお返事します。</p></div></div>
+  <div class="mn"><div class="i"><div class="tp">FIRST TIME</div><h3>はじめての方へ</h3>
+   <div class="row"><span>初回オンライン 30分</span><b>¥3,300<small>税込</small></b></div>
+   <p>どんな雰囲気か、まずは気軽に試してみたい方に。</p></div></div>
+ </div>
+ <p class="note">※延長は10分ごとに ¥1,650。お支払いはクレジットカード・銀行振込に対応しています。</p>
+</div></section>
+
+<section class="light"><div class="wrap">
+ <div class="st"><div class="orn">✦</div><div class="en">FLOW</div><h2>ご予約から鑑定まで</h2></div>
+ <div class="flow">
+  <div class="fl"><div class="n">I</div><h3>ご予約</h3><p>ご希望のメニューと日時を、LINEかフォームからお知らせください。</p></div>
+  <div class="fl"><div class="n">II</div><h3>ご相談内容</h3><p>話したいテーマを、ひとことで大丈夫なのでお送りください。</p></div>
+  <div class="fl"><div class="n">III</div><h3>鑑定</h3><p>カードを一緒に見ながら、気持ちを整理していきます。</p></div>
+  <div class="fl"><div class="n">IV</div><h3>振り返り</h3><p>鑑定内容のメモを、あとからお送りします。</p></div>
+ </div>
+</div></section>
+
+<section class="stars"><div class="wrap">
+ <div class="st"><div class="orn">✦</div><div class="en">VOICES</div><h2>お客さまの声</h2></div>
+ <div class="voices">
+  <div class="vo"><p>話しているうちに、自分が本当はどうしたいのかがわかってきました。帰り道、気持ちがとても軽かったです。</p><div class="who">30代・会社員　対面鑑定60分</div></div>
+  <div class="vo"><p>夜遅くでもオンラインで相談できて助かりました。やさしい言葉ばかりで、こわさは全くありませんでした。</p><div class="who">40代・主婦　オンライン鑑定30分</div></div>
+  <div class="vo"><p>カードの写真つきのお返事を、迷ったときに何度も読み返しています。お守りのような存在です。</p><div class="who">20代・保育士　メール鑑定</div></div>
+ </div>
+</div></section>
+
+<section class="light"><div class="wrap">
+ <div class="st"><div class="orn">✦</div><div class="en">Q &amp; A</div><h2>よくあるご質問</h2></div>
+ <div class="faq">
+  <details open><summary><span class="q">Q</span>占いを受けるのは初めてで、緊張します。</summary><p>はじめての方がほとんどです。ご相談内容がまとまっていなくても大丈夫。雑談からゆっくり始めましょう。</p></details>
+  <details><summary><span class="q">Q</span>こわい結果を言われることはありますか？</summary><p>カードには、どれも前向きな意味があります。不安をあおるようなお伝えの仕方はしませんので、ご安心ください。</p></details>
+  <details><summary><span class="q">Q</span>相談した内容は外にもれませんか？</summary><p>ご相談の内容やお名前を、第三者にお伝えすることはありません。</p></details>
+  <details><summary><span class="q">Q</span>オンラインでも対面と同じように受けられますか？</summary><p>はい。カードを画面に映しながら進めるので、対面と同じようにご覧いただけます。</p></details>
+ </div>
+</div></section>
+
+<section class="cta" id="cta"><div class="wrap">
+ <div class="it">Open the card, open your heart.</div>
+ <h2>はじめての方は、30分の初回鑑定から</h2>
+ <div class="ctas"><a class="btn gold" href="#cta">LINEで予約する</a><a class="btn ol" href="#cta">空き状況を見る</a></div>
+ <small>初回オンライン鑑定 30分 ¥3,300（税込）</small>
+ <p class="disc">※鑑定は、ご自身の気持ちを整理するためのヒントです。医療・法律・お金に関するご判断は、各専門家にご相談ください。</p>
+</div></section>
+
+<footer><span>※架空のお店のデモサイトです｜制作：Muse Web.</span><span>© Arcane Rose</span></footer>
+</body></html>

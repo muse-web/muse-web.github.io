@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sillage｜大人のためのパーソナルスタイリング（デモ）</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Zen+Old+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Sillage LP：ルックブック（雑誌の特集ページ）風。番号つき章立て・細い罫・値札風の料金表 */
+:root{--bg:#F4EFE9;--paper:#FBF8F4;--ink:#3B3330;--soft:#857772;--rose:#C49A98;--rose2:#EAD9D6;--line:#D9CEC5;--f-en:"Bodoni Moda",serif;--f-jp:"Zen Old Mincho",serif;--f-ui:"Zen Kaku Gothic New",sans-serif;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-jp);line-height:2;letter-spacing:.05em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0;font-weight:500}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.en{font-family:var(--f-en)}.ui{font-family:var(--f-ui)}
+/* header */
+.hd{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:22px 32px}
+.logo{font-family:var(--f-en);font-size:28px;letter-spacing:.08em;line-height:1}.logo small{display:block;font-family:var(--f-ui);font-size:9px;letter-spacing:.32em;color:var(--soft);margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 30px;font-family:var(--f-ui);font-size:14px;letter-spacing:.14em;transition:transform .3s,background .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--ink);color:#fff}.btn.line{border:1px solid var(--ink)}
+.btn.sm{padding:9px 20px;font-size:12px}
+/* hero */
+.hero{position:relative;min-height:min(92vh,760px);display:flex;align-items:center;background:var(--paper) url(hero.jpg) 70% 18%/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,248,244,.97) 0,rgba(251,248,244,.9) 34%,rgba(251,248,244,0) 60%)}
+.hero .in{position:relative;padding:120px 0 80px 6vw;max-width:680px}
+.kicker{font-family:var(--f-ui);font-size:11px;letter-spacing:.42em;color:var(--rose)}
+.hero h1{font-size:clamp(26px,3.6vw,46px);line-height:1.6;letter-spacing:.1em;margin:18px 0 10px}
+.ln{display:inline-block;white-space:nowrap}
+.hero .en-catch{font-family:var(--f-en);font-style:italic;font-size:clamp(22px,2.6vw,32px);color:var(--soft)}
+.hero p.lead{color:var(--soft);font-size:15px;margin:22px 0 32px;max-width:440px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.tag-row span{font-family:var(--f-ui);font-size:12px;letter-spacing:.12em;border:1px solid var(--line);background:rgba(255,255,255,.7);padding:4px 14px}
+/* section heading */
+section{padding:110px 0}
+.sh{display:grid;grid-template-columns:auto 1fr;gap:6px 26px;align-items:end;margin-bottom:56px}
+.sh .no{font-family:var(--f-en);font-size:76px;line-height:.8;color:var(--rose)}
+.sh .t{border-bottom:1px solid var(--ink);padding-bottom:12px}
+.sh .t .e{font-family:var(--f-en);font-style:italic;font-size:15px;color:var(--soft);letter-spacing:.08em}
+.sh .t h2{font-size:clamp(22px,2.6vw,30px);letter-spacing:.12em;line-height:1.6}
+/* worries */
+.worry{background:var(--paper)}
+.wl{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px;list-style:none;padding:0;margin:0}
+.wl li{display:flex;gap:16px;align-items:baseline;padding:20px 4px;border-bottom:1px solid var(--line);font-size:16px}
+.wl li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--rose);translate:0 -2px}
+.worry .ans{margin-top:56px;text-align:center;font-size:clamp(18px,2vw,22px);letter-spacing:.12em;line-height:2}
+.worry .ans b{font-weight:600;background:linear-gradient(transparent 62%,var(--rose2) 62%)}
+/* solution lookbook */
+.looks{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.look{position:relative}
+.look .ph{aspect-ratio:3/4;overflow:hidden}.look .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.look:hover .ph img{transform:scale(1.04)}
+.look .cap{position:relative;margin:-38px 18px 0;background:var(--paper);padding:20px 22px 22px}
+.look .cap .e{font-family:var(--f-en);font-style:italic;color:var(--rose);font-size:15px}
+.look .cap h3{font-size:19px;letter-spacing:.1em;margin:2px 0 8px}
+.look .cap p{font-size:14px;color:var(--soft);line-height:1.9}
+.look:nth-child(2){margin-top:56px}
+/* menu = price tags */
+.menu{background:var(--paper)}
+.price{max-width:860px;margin:0 auto}
+.pr{display:grid;grid-template-columns:1fr auto;gap:4px 18px;padding:26px 0;border-bottom:1px solid var(--line)}
+.pr h3{font-size:19px;letter-spacing:.1em;display:flex;align-items:baseline;gap:14px}
+.pr h3 .en{font-style:italic;font-size:14px;color:var(--rose);letter-spacing:.06em}
+.pr .yen{font-family:var(--f-en);font-size:28px;letter-spacing:.04em;white-space:nowrap}.pr .yen small{font-family:var(--f-ui);font-size:11px;color:var(--soft);margin-left:4px}
+.pr p{grid-column:1/-1;font-size:14px;color:var(--soft)}
+.pr.best{background:linear-gradient(90deg,var(--rose2),rgba(234,217,214,0));padding-left:20px;margin-left:-20px}
+.pr .badge{font-family:var(--f-ui);font-size:11px;letter-spacing:.14em;background:var(--ink);color:#fff;padding:2px 10px}
+.note{text-align:center;font-family:var(--f-ui);font-size:12px;color:var(--soft);margin-top:24px}
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:f;position:relative}
+.flow::before{content:"";position:absolute;left:12%;right:12%;top:30px;height:1px;background:var(--line)}
+.fs{text-align:center;padding:0 14px;position:relative}
+.fs .n{width:60px;height:60px;margin:0 auto 18px;border-radius:50%;background:var(--paper);border:1px solid var(--rose);display:grid;place-items:center;font-family:var(--f-en);font-size:22px;color:var(--rose)}
+.fs h3{font-size:17px;letter-spacing:.1em;margin-bottom:6px}.fs p{font-size:13px;color:var(--soft);line-height:1.9}
+/* voice */
+.voice{background:var(--ink);color:#F4EFE9}
+.voice .sh .no{color:var(--rose2)}.voice .sh .t{border-color:#F4EFE9}.voice .sh .t .e{color:#BFB1AB}
+.vs{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.v{border-top:1px solid rgba(244,239,233,.35);padding-top:26px}
+.v .q{font-family:var(--f-en);font-size:60px;line-height:.4;color:var(--rose)}
+.v p{font-size:15px;line-height:2.05;margin:16px 0 18px}
+.v .who{font-family:var(--f-ui);font-size:12px;letter-spacing:.14em;color:#BFB1AB}
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+details{border-bottom:1px solid var(--line);padding:6px 0}
+summary{list-style:none;cursor:pointer;display:flex;gap:16px;align-items:baseline;padding:18px 0;font-size:16px;letter-spacing:.06em}
+summary::-webkit-details-marker{display:none}
+summary .en{font-style:italic;color:var(--rose);font-size:20px}
+summary::after{content:"+";margin-left:auto;font-family:var(--f-en);font-size:22px;color:var(--soft);transition:rotate .3s}
+details[open] summary::after{rotate:45deg}
+details p{padding:0 0 20px 34px;color:var(--soft);font-size:14px}
+/* cta */
+.cta{position:relative;padding:120px 0;text-align:center;background:linear-gradient(rgba(59,51,48,.55),rgba(59,51,48,.55)),url(shop.jpg) center/cover;color:#fff}
+.cta .en{font-style:italic;font-size:clamp(28px,4vw,46px)}
+.cta h2{font-size:clamp(19px,2.2vw,24px);letter-spacing:.14em;margin:10px 0 30px}
+.cta .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta .btn.wh{background:#fff;color:var(--ink)}.cta .btn.ol{border:1px solid #fff;color:#fff}
+.cta small{display:block;margin-top:22px;font-family:var(--f-ui);font-size:12px;letter-spacing:.1em;opacity:.85}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:26px 32px;font-family:var(--f-ui);font-size:11px;letter-spacing:.1em;color:var(--soft);background:var(--paper)}
+/* sp */
+@media(max-width:760px){
+ .hd{padding:16px 18px}.hd .btn{display:none}
+ .hero{min-height:auto;align-items:flex-end;background-position:78% top;background-size:auto 66%;background-color:var(--paper)}
+ .hero::before{background:linear-gradient(180deg,rgba(251,248,244,0) 30%,rgba(251,248,244,.9) 48%,var(--paper) 58%)}
+ .hero .in{padding:320px 20px 56px}
+ section{padding:76px 0}.sh{grid-template-columns:1fr;gap:0}.sh .no{font-size:52px}
+ .wl{grid-template-columns:1fr}.looks,.vs{grid-template-columns:1fr}.look:nth-child(2){margin-top:0}
+ .flow{grid-template-columns:1fr 1fr;gap:34px 0}.flow::before{display:none}
+ .pr{grid-template-columns:1fr;gap:2px}.pr .yen{font-size:24px}
+ .pr h3{flex-wrap:wrap;gap:4px 10px;font-size:17px}.pr h3 .en{font-size:13px}
+ .pr.best{margin-left:-12px;padding-left:12px}
+ .fs h3{font-size:15px;letter-spacing:.04em}
+ .sh .t h2{font-size:20px;letter-spacing:.06em}
+ .hero h1{font-size:25px;letter-spacing:.06em}
+ .cta h2{font-size:17px;letter-spacing:.06em}
+}
+</style></head><body>
+
+<header class="hd"><a class="logo" href="#top">Sillage<small>PERSONAL STYLING</small></a><a class="btn dark sm" href="#cta">ご予約・ご相談</a></header>
+
+<div class="hero" id="top"><div class="in">
+ <div class="kicker">FOR WOMEN IN THEIR 30s–50s</div>
+ <h1><span class="ln">似合う服がわかると、</span><span class="ln">毎朝が、軽くなる。</span></h1>
+ <div class="en-catch">— Your style, beautifully edited.</div>
+ <p class="lead">骨格・パーソナルカラー・お手持ちの服。3つを知ることで、迷う時間と「着ない服」を減らす、大人のためのスタイリングサロンです。</p>
+ <div class="ctas"><a class="btn dark" href="#cta">初回カウンセリングを予約</a><a class="btn line" href="#menu">メニューと料金</a></div>
+ <div class="tag-row"><span>完全予約制</span><span>オンライン相談可</span><span>買い物同行あり</span></div>
+</div></div>
+
+<section class="worry"><div class="wrap">
+ <div class="sh"><div class="no">01</div><div class="t"><div class="e">Worries</div><h2>こんなお悩み、ありませんか</h2></div></div>
+ <ul class="wl">
+  <li>クローゼットは満杯なのに、着ていく服がない</li>
+  <li>年齢とともに、昔の服がしっくりこなくなった</li>
+  <li>試着では素敵なのに、家で着ると何か違う</li>
+  <li>流行を追うより、自分らしいおしゃれがしたい</li>
+  <li>お店で店員さんにすすめられると断れない</li>
+  <li>仕事にも休日にも使える、上品な服がほしい</li>
+ </ul>
+ <p class="ans">その迷いは、センスの問題ではありません。<br><b>「自分に似合う理由」</b>を知るだけで、選び方は変わります。</p>
+</div></section>
+
+<section><div class="wrap">
+ <div class="sh"><div class="no">02</div><div class="t"><div class="e">Our Approach</div><h2>似合うを知る、3つのアプローチ</h2></div></div>
+ <div class="looks">
+  <div class="look"><div class="ph"><img src="color.jpg" alt="パーソナルカラーの布見本"></div><div class="cap"><div class="e">Color</div><h3>パーソナルカラー</h3><p>肌・瞳・髪の色から、顔色を明るく見せる色をご提案。似合うピンクやベージュの「ちょうどいい色み」がわかります。</p></div></div>
+  <div class="look"><div class="ph"><img src="closet.jpg" alt="整ったクローゼット"></div><div class="cap"><div class="e">Body &amp; Wardrobe</div><h3>骨格診断・クローゼット</h3><p>体のラインに合う素材と形を知り、お手持ちの服を「残す・組み合わせる・手放す」に整理します。</p></div></div>
+  <div class="look"><div class="ph"><img src="shop.jpg" alt="買い物同行の様子"></div><div class="cap"><div class="e">Shopping</div><h3>買い物同行</h3><p>診断結果をもとに、実際のお店で一緒に選びます。予算に合わせて、着回しやすい一着を。</p></div></div>
+ </div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+ <div class="sh"><div class="no">03</div><div class="t"><div class="e">Menu &amp; Price</div><h2>メニューと料金</h2></div></div>
+ <div class="price">
+  <div class="pr"><h3>骨格診断<span class="en">Body Type</span></h3><div class="yen">¥16,500<small>税込</small></div><p>約90分｜似合う素材・形・丈のバランスをシートにまとめてお渡しします。</p></div>
+  <div class="pr"><h3>パーソナルカラー診断<span class="en">Color</span></h3><div class="yen">¥19,800<small>税込</small></div><p>約120分｜120色のドレープで、似合う色とメイクの色みをご提案します。</p></div>
+  <div class="pr"><h3>クローゼット診断<span class="en">Wardrobe</span></h3><div class="yen">¥27,500<small>税込</small></div><p>約3時間｜ご自宅に伺い、お手持ちの服でつくる着回しコーデを10パターン。</p></div>
+  <div class="pr"><h3>買い物同行<span class="en">Shopping</span></h3><div class="yen">¥33,000<small>税込</small></div><p>約3時間｜診断結果をもとに、ご予算内で一緒にお買い物（商品代は別途）。</p></div>
+  <div class="pr best"><h3>トータルプラン<span class="badge">人気</span></h3><div class="yen">¥58,000<small>税込</small></div><p>骨格診断＋パーソナルカラー診断＋買い物同行｜単品で受けるより¥11,300お得です。</p></div>
+ </div>
+ <p class="note">※交通費は別途いただく場合があります。オンライン相談は各メニュー −¥3,000。</p>
+</div></section>
+
+<section><div class="wrap">
+ <div class="sh"><div class="no">04</div><div class="t"><div class="e">Flow</div><h2>ご予約から当日まで</h2></div></div>
+ <div class="flow">
+  <div class="fs"><div class="n">1</div><h3>ご予約</h3><p>LINEまたはフォームから、ご希望の日時をお知らせください。</p></div>
+  <div class="fs"><div class="n">2</div><h3>事前アンケート</h3><p>好きな服・苦手な服、よく行くお店などを簡単にうかがいます。</p></div>
+  <div class="fs"><div class="n">3</div><h3>診断・提案</h3><p>鏡の前で一緒に確かめながら、似合う理由をお伝えします。</p></div>
+  <div class="fs"><div class="n">4</div><h3>アフターフォロー</h3><p>1か月間、LINEでコーデのご相談を何度でも受け付けます。</p></div>
+ </div>
+</div></section>
+
+<section class="voice"><div class="wrap">
+ <div class="sh"><div class="no">05</div><div class="t"><div class="e">Voices</div><h2>お客さまの声</h2></div></div>
+ <div class="vs">
+  <div class="v"><div class="q">“</div><p>手持ちの服の半分が「似合わない形」だったと知って納得。今は朝のコーデが5分で決まります。</p><div class="who">40代・会社員　骨格診断＋クローゼット診断</div></div>
+  <div class="v"><div class="q">“</div><p>ずっと避けていたピンクが、色みを変えるだけでこんなに似合うなんて。周りからも顔色を褒められます。</p><div class="who">30代・看護師　パーソナルカラー診断</div></div>
+  <div class="v"><div class="q">“</div><p>一人では入りにくかったお店にも一緒に行けて、予算内で着回せる5着がそろいました。</p><div class="who">50代・自営業　トータルプラン</div></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="sh"><div class="no">06</div><div class="t"><div class="e">Q&amp;A</div><h2>よくあるご質問</h2></div></div>
+ <div class="faq">
+  <details open><summary><span class="en">Q.</span>おしゃれに自信がなくても大丈夫ですか？</summary><p>もちろんです。多くの方が「何を着たらいいかわからない」ところから始められます。専門用語は使わず、わかりやすくお伝えします。</p></details>
+  <details><summary><span class="en">Q.</span>当日はどんな服装で行けばいいですか？</summary><p>いつもの服装でお越しください。パーソナルカラー診断の日は、素顔に近いメイクだとより正確にお伝えできます。</p></details>
+  <details><summary><span class="en">Q.</span>買い物同行で、たくさん買わされませんか？</summary><p>ご予算は事前に決めていただき、その範囲でご提案します。「今日は買わない」という日でも大丈夫です。</p></details>
+  <details><summary><span class="en">Q.</span>オンラインでも受けられますか？</summary><p>骨格診断・クローゼット相談はオンラインでも承ります。パーソナルカラー診断は対面のみです。</p></details>
+ </div>
+</div></section>
+
+<section class="cta" id="cta"><div class="wrap">
+ <div class="en">Find your sillage.</div>
+ <h2>まずは60分の初回カウンセリングから</h2>
+ <div class="ctas"><a class="btn wh" href="#cta">LINEで予約する</a><a class="btn ol" href="#cta">空き状況を見る</a></div>
+ <small>初回カウンセリング ¥5,500（税込）｜ご予約後のメニュー変更もできます</small>
+</div></section>
+
+<footer><span class="demo">※架空のお店のデモサイトです｜制作：Muse Web.</span><span>© Sillage</span></footer>
+</body></html>
