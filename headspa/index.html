@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soyo｜ヘッドスパ専門ルーム（デモ）</title><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* soyo：縦書きの見出し・セージグリーンの余白・波の区切り。和のしずけさ */
+:root{--sage:#6F7F6A;--sage2:#A9B7A0;--mist:#EEF0E8;--paper:#FAFAF6;--ink:#3F4A3C;--soft:#7C8577;--gold:#C9B07A}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Shippori Mincho",serif;line-height:2.1;letter-spacing:.08em;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0;font-weight:500}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+header{position:fixed;inset:0 0 auto;z-index:9;display:flex;justify-content:space-between;align-items:center;padding:18px 32px;background:linear-gradient(rgba(250,250,246,.95),rgba(250,250,246,0))}
+.logo{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:30px;line-height:1;color:var(--sage)}.logo small{display:block;font-style:normal;font-family:"Zen Kaku Gothic New";font-size:9px;letter-spacing:.4em;color:var(--soft)}
+.rsv{font-family:"Zen Kaku Gothic New";font-size:13px;letter-spacing:.14em;background:var(--sage);color:#fff;padding:10px 22px;border-radius:999px}
+/* hero */
+.hero{position:relative;height:100vh;min-height:620px;display:grid;grid-template-columns:38% 62%}
+.hero .ph{background:url(hero.jpg) 62% center/cover}
+.hero .tx{display:flex;align-items:center;justify-content:center;background:var(--mist);position:relative}
+.vt{writing-mode:vertical-rl;font-size:clamp(26px,2.8vw,38px);letter-spacing:.3em;line-height:2.2;color:var(--ink)}
+.vt small{display:block;font-size:14px;letter-spacing:.3em;color:var(--soft);margin-right:22px}
+.hero .badge{position:absolute;left:50%;bottom:9%;translate:-50% 0;text-align:center;font-family:"Zen Kaku Gothic New";font-size:12px;letter-spacing:.2em;color:var(--soft);white-space:nowrap}
+.hero .badge b{display:block;font-family:"Shippori Mincho";font-weight:600;font-size:22px;color:var(--sage);letter-spacing:.1em}
+.wave{display:block;width:100%;height:46px}
+section{padding:110px 0}
+.ttl{text-align:center;margin-bottom:56px}.ttl .en{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:22px;color:var(--gold)}
+.ttl h2{font-size:clamp(22px,2.4vw,30px);letter-spacing:.16em;margin-top:4px}
+/* worries */
+.wr{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
+.wr div{background:#fff;border:1px solid #E1E5DA;border-radius:120px 120px 10px 10px;padding:40px 20px 30px;text-align:center;font-size:15px}
+.wr div::before{content:"";display:block;width:28px;height:28px;margin:0 auto 14px;border-radius:50%;background:radial-gradient(circle,var(--sage2) 0 30%,transparent 32%),var(--mist)}
+.lead{text-align:center;font-size:17px;margin-top:44px}
+/* about (photo + text) */
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.ab .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ab .pics img{aspect-ratio:3/4;object-fit:cover;border-radius:4px}
+.ab .pics img:last-child{margin-top:48px}
+.ab h3{font-size:24px;letter-spacing:.14em;margin-bottom:20px}.ab p{color:var(--soft);font-size:15px;margin-bottom:12px}
+/* menu */
+.mn{background:var(--mist)}
+.menu{max-width:820px;margin:0 auto;background:var(--paper);padding:50px 56px;border-radius:6px}
+.menu .row{display:flex;align-items:baseline;gap:14px;padding:18px 0;border-bottom:1px dashed #CBD3C3}
+.menu .row:last-child{border-bottom:0}
+.menu h3{font-size:18px;letter-spacing:.1em}.menu .min{font-family:"Zen Kaku Gothic New";font-size:12px;color:var(--soft)}
+.menu .dots{flex:1;border-bottom:1px dotted #B9C2B1;translate:0 -6px}
+.menu .y{font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--sage)}
+.menu .first{background:var(--sage);color:#fff;font-family:"Zen Kaku Gothic New";font-size:11px;letter-spacing:.14em;padding:2px 10px;border-radius:999px;margin-right:8px;vertical-align:middle}
+.menu .note{font-family:"Zen Kaku Gothic New";font-size:12px;color:var(--soft);margin-top:18px}
+/* flow */
+.fl{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:f}
+.fl div{text-align:center;padding:0 6px}
+.fl div::before{counter-increment:f;content:counter(f,decimal-leading-zero);display:flex;align-items:center;justify-content:center;width:74px;height:74px;margin:0 auto 16px;border:1px solid var(--sage2);border-radius:50%;font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--sage)}
+.fl h3{font-size:17px}.fl p{font-family:"Zen Kaku Gothic New";font-size:13px;color:var(--soft);line-height:1.9;margin-top:6px}
+/* room */
+.room{display:grid;grid-template-columns:2fr 1fr;gap:12px}.room img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+.room .s{display:grid;gap:12px}
+/* voice */
+.vc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.vc div{border-top:2px solid var(--sage2);padding-top:20px;font-size:15px}.vc span{display:block;font-family:"Zen Kaku Gothic New";font-size:12px;color:var(--soft);margin-top:10px}
+/* faq */
+.faq{max-width:780px;margin:0 auto}
+.faq details{border-bottom:1px solid #DDE2D5;padding:18px 4px}.faq summary{cursor:pointer;list-style:none;font-size:16px;display:flex;gap:14px}
+.faq summary::before{content:"Q";font-family:"Cormorant Garamond";font-size:22px;color:var(--gold);line-height:1.2}
+.faq p{font-family:"Zen Kaku Gothic New";font-size:14px;color:var(--soft);padding:10px 0 0 30px}
+/* cta */
+.cta{background:var(--sage);color:#fff;text-align:center}
+.cta h2{font-size:clamp(22px,2.6vw,30px);letter-spacing:.14em}.cta p{font-family:"Zen Kaku Gothic New";font-size:14px;opacity:.9;margin-top:12px}
+.cta .bt{display:inline-flex;gap:14px;margin-top:30px;flex-wrap:wrap;justify-content:center}
+.cta .bt a{background:#fff;color:var(--sage);font-family:"Zen Kaku Gothic New";font-size:14px;letter-spacing:.14em;padding:15px 34px;border-radius:999px}
+.cta .bt a.ln{background:transparent;color:#fff;border:1px solid #fff}
+footer{text-align:center;padding:26px;font-family:"Zen Kaku Gothic New";font-size:11px;color:var(--soft)}
+.fix{display:none}
+@media(max-width:820px){
+ header{padding:14px 18px}.rsv{display:none}
+ .hero{grid-template-columns:1fr;grid-template-rows:auto auto;height:auto;min-height:0}
+ .hero .ph{height:58vh;max-height:520px;min-height:340px}
+ .hero .ph{order:-1}.hero .tx{padding:40px 0 90px}
+ .vt{font-size:24px}
+ .wr,.ab,.fl,.vc{grid-template-columns:1fr}.fl{gap:30px}
+ .room{grid-template-columns:1fr}.menu{padding:30px 22px}
+ section{padding:76px 0}
+ .menu .row{flex-wrap:wrap}.menu .dots{display:none}.menu .y{margin-left:auto}
+ .fix{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:9;gap:8px}
+ .fix a{flex:1;text-align:center;padding:13px 0;border-radius:999px;font-family:"Zen Kaku Gothic New";font-size:13px;letter-spacing:.1em;background:var(--sage);color:#fff;box-shadow:0 6px 18px rgba(60,70,55,.25)}
+ .fix a.ln{background:#fff;color:var(--sage)}
+ footer{padding-bottom:90px}
+}
+</style></head><body>
+<header><a class="logo" href="#">soyo<small>HEAD SPA ROOM</small></a><a class="rsv" href="#cta">ご予約</a></header>
+
+<div class="hero">
+ <div class="tx"><div class="vt">頭がかるくなると、<br>こころも、そよぐ。<small>完全個室のヘッドスパ専門ルーム</small></div>
+  <div class="badge">はじめての方へ<b>スタンダード60分 ¥6,600</b></div></div>
+ <div class="ph" role="img" aria-label="ヘッドスパでくつろぐ女性"></div>
+</div>
+
+<section><div class="wrap">
+ <div class="ttl"><div class="en">your days</div><h2>こんな毎日、ありませんか</h2></div>
+ <div class="wr"><div>画面を見る時間が長く、<br>夕方には頭が重い</div><div>考えごとが止まらず、<br>夜にうまく休めない</div><div>自分だけの<br>静かな時間がほしい</div></div>
+ <p class="lead">soyo は、頭と気持ちをゆるめるための場所です。</p>
+</div></section>
+<svg class="wave" viewBox="0 0 1440 46" preserveAspectRatio="none"><path d="M0 30C240 0 480 0 720 23s480 23 720-6v29H0z" fill="#EEF0E8"/></svg>
+
+<section style="background:var(--mist);padding-top:70px"><div class="wrap">
+ <div class="ab">
+  <div class="pics"><img src="p1.jpg" alt="泡でやさしく洗う手元"><img src="p4.jpg" alt="施術後の女性の後ろ姿"></div>
+  <div><div class="ttl" style="text-align:left;margin-bottom:24px"><div class="en">about</div></div>
+   <h3>ひとりのための、<br>六十分。</h3>
+   <p>半個室ではなく、扉で仕切られた完全個室。照明を落とし、季節のアロマを選んでいただいてから始めます。</p>
+   <p>指圧とブラッシング、温かいタオルで、頭皮をゆっくりほぐしていきます。眠ってしまっても大丈夫です。</p></div>
+ </div>
+</div></section>
+<svg class="wave" viewBox="0 0 1440 46" preserveAspectRatio="none" style="transform:scaleY(-1)"><path d="M0 30C240 0 480 0 720 23s480 23 720-6v29H0z" fill="#EEF0E8"/></svg>
+
+<section class="mn" style="background:none"><div class="wrap">
+ <div class="ttl"><div class="en">menu</div><h2>メニューと料金</h2></div>
+ <div class="menu">
+  <div class="row"><h3><span class="first">初回</span>スタンダード</h3><span class="min">60分</span><span class="dots"></span><span class="y">¥6,600</span></div>
+  <div class="row"><h3>スタンダード</h3><span class="min">60分</span><span class="dots"></span><span class="y">¥8,800</span></div>
+  <div class="row"><h3>ロング（首・肩つき）</h3><span class="min">90分</span><span class="dots"></span><span class="y">¥12,100</span></div>
+  <div class="row"><h3>アロマを追加</h3><span class="min">＋好きな香り</span><span class="dots"></span><span class="y">¥1,100</span></div>
+  <p class="note">表示はすべて税込です。カウンセリング・お着替えの時間は含みません。</p>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="en">flow</div><h2>当日の流れ</h2></div>
+ <div class="fl">
+  <div><h3>カウンセリング</h3><p>お疲れのところや、香りの好みをうかがいます。</p></div>
+  <div><h3>シャンプー</h3><p>たっぷりの泡で、頭皮をやさしく洗います。</p></div>
+  <div><h3>ヘッドスパ</h3><p>指圧とブラッシングで、ゆっくりほぐします。</p></div>
+  <div><h3>ティータイム</h3><p>ハーブティーで、ひと息ついてからお帰りに。</p></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="en">room</div><h2>個室のご案内</h2></div>
+ <div class="room"><img src="p3.jpg" alt="セージグリーンの個室"><div class="s"><img src="p2.jpg" alt="タオルとアロマオイル"><img src="hero.jpg" alt="施術中のようす" style="object-position:62% center"></div></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="en">voice</div><h2>お客さまの声</h2></div>
+ <div class="vc">
+  <div>ずっと考えごとをしていた頭が、静かになった感じがしました。個室なので人目を気にせず過ごせます。<span>40代・会社員</span></div>
+  <div>シャンプーの泡がとても気持ちよくて、途中で眠ってしまいました。帰りのお茶もうれしいです。<span>30代・看護師</span></div>
+  <div>月に一度の自分へのごほうびにしています。香りを選べるのが楽しみです。<span>30代・デザイナー</span></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="en">Q&amp;A</div><h2>よくあるご質問</h2></div>
+ <div class="faq">
+  <details><summary>メイクをしたままでも大丈夫ですか？</summary><p>はい。お顔まわりには触れないメニューもございます。気になる方はご予約時にお知らせください。</p></details>
+  <details><summary>髪が濡れたまま帰ることになりますか？</summary><p>ブローして乾かしてからお帰りいただけます。ヘアアイロンもご用意しています。</p></details>
+  <details><summary>妊娠中でも受けられますか？</summary><p>体調によりますので、ご予約前にご相談ください。かかりつけの医師にご確認いただくこともおすすめしています。</p></details>
+ </div>
+</div></section>
+
+<section class="cta" id="cta"><div class="wrap">
+ <h2>静かな六十分を、あなたに。</h2><p>はじめての方はスタンダード60分 ¥6,600（税込）</p>
+ <div class="bt"><a href="#cta">Webで予約する</a><a class="ln" href="#cta">LINEで相談する</a></div>
+</div></section>
+<footer>※架空のお店のデモサイトです｜制作：Muse Web.　© soyo</footer>
+<div class="fix"><a href="#cta">Webで予約</a><a class="ln" href="#cta">LINEで相談</a></div>
+</body></html>

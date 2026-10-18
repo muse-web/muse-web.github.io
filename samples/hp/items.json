@@ -1,0 +1,67 @@
+{
+ "title": "ホームページ",
+ "en": "Homepage",
+ "lead": "お店の世界観を伝える、複数ページのホームページ。クリックで実際のデモサイトが開きます。",
+ "items": [
+  {
+   "img": "hair.jpg",
+   "title": "美容室のホームページ",
+   "note": "雑誌のような罫線レイアウト",
+   "href": "../../hair/"
+  },
+  {
+   "img": "jewelryhp.jpg",
+   "title": "ジュエリーショップのホームページ",
+   "note": "パール色のブランドサイト",
+   "href": "../../jewelry-hp/"
+  },
+  {
+   "img": "lashhp.jpg",
+   "title": "マツエクサロンのホームページ",
+   "note": "左メニューのホテルのような静けさ",
+   "href": "../../lash-hp/"
+  },
+  {
+   "img": "fashionhp.jpg",
+   "title": "ファッションコンサルのホームページ",
+   "note": "グレージュ×くすみピンク",
+   "href": "../../fashion/hp.html"
+  },
+  {
+   "img": "tarothp.jpg",
+   "title": "タロット占いのホームページ",
+   "note": "星空と魔法陣が動く世界観",
+   "href": "../../tarot/hp.html"
+  },
+  {
+   "img": "esthehp.jpg",
+   "title": "エステサロンのホームページ",
+   "note": "セージ×リネン｜縦書きの見出し",
+   "href": "../../esthe-hp/"
+  },
+  {
+   "img": "nailhp.jpg",
+   "title": "ネイルサロンのホームページ",
+   "note": "カフェのようなポラロイド風",
+   "href": "../../nail-hp/"
+  },
+  {
+   "img": "cosmehp.jpg",
+   "title": "スキンケアブランドのホームページ",
+   "note": "白×シャンパンの商品が主役",
+   "href": "../../cosme-hp/"
+  },
+  {
+   "img": "headspahp.jpg",
+   "title": "ヘッドスパ専門店のホームページ",
+   "note": "苔色の和モダン｜水の波紋",
+   "href": "../../headspa-hp/"
+  },
+  {
+   "img": "browhp.jpg",
+   "title": "アイブロウサロンのホームページ",
+   "note": "テラコッタ×アーチの大胆な英字",
+   "href": "../../brow-hp/"
+  }
+ ]
+}

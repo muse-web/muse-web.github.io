@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-fTxRGByfycDFMR1DUpgr07vH7xq4e0q/hC5PpV7yKs8='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arc.｜アイブロウサロン 公式サイト（デモ）</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700&family=Fraunces:ital,opsz,wght@1,9..144,300&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Arc.：テラコッタ×ローズベージュ。眉の弧をモチーフにした大きなアーチと、太いモダンな英字 */
+:root{--terra:#B4664E;--terra2:#D9937C;--rose:#F1DDD3;--beige:#FAF3EE;--ink:#2F2522;--soft:#7E6B64;--line:#E8D6CC}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--beige);color:var(--ink);font-family:"Zen Kaku Gothic New",sans-serif;line-height:1.95;letter-spacing:.04em;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0;font-weight:500}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+.syne{font-family:"Syne",sans-serif;font-weight:700;letter-spacing:-.01em}
+.it{font-family:"Fraunces",serif;font-style:italic;font-weight:300}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 34px}
+.logo{font-size:30px}.logo i{color:var(--terra);font-style:normal}
+header nav{display:flex;gap:26px;font-size:13px;font-weight:500}
+header .rsv{border:1.5px solid var(--ink);border-radius:999px;padding:8px 22px;font-size:13px;font-weight:700}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:30px 34px 80px;max-width:1300px;margin:0 auto}
+.hero .big{font-size:clamp(66px,9vw,138px);line-height:.92}
+.hero .big span{display:block}.hero .big .o{color:transparent;-webkit-text-stroke:1.5px var(--ink)}.hero .big .t{color:var(--terra)}
+.hero h1{font-size:clamp(19px,1.9vw,24px);font-weight:700;letter-spacing:.1em;margin:30px 0 10px}
+.hero p{color:var(--soft);font-size:15px}
+.hero .cta{display:inline-flex;align-items:center;gap:14px;margin-top:28px;background:var(--ink);color:#fff;border-radius:999px;padding:14px 18px 14px 28px;font-weight:700;font-size:14px}
+.hero .cta b{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--terra2)}
+.archs{position:relative;height:560px}
+.archs .a1{position:absolute;right:0;top:0;width:76%;height:100%;border-radius:999px 999px 0 0;background:url(../img/ls_model.jpg) center 30%/cover}
+.archs .a2{position:absolute;left:0;bottom:40px;width:40%;aspect-ratio:3/4;border-radius:999px 999px 0 0;background:url(../img/nl_brow.jpg) center/cover;border:8px solid var(--beige)}
+.archs .badge{position:absolute;left:24%;top:30px;width:120px;height:120px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;text-align:center;font-size:13px;font-weight:700;line-height:1.5;rotate:-10deg}
+.archs .badge b{font-family:"Syne",sans-serif;font-size:26px;display:block}
+/* marquee */
+.mq{background:var(--ink);color:var(--rose);overflow:hidden;white-space:nowrap;padding:14px 0}
+.mq div{display:inline-block;animation:mq 26s linear infinite;font-family:"Syne",sans-serif;font-weight:700;font-size:20px;letter-spacing:.06em}
+.mq span{margin:0 26px;color:var(--terra2)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:110px 0}
+.hd{margin-bottom:46px}.hd .syne{font-size:clamp(40px,5vw,64px);line-height:1}.hd p{color:var(--terra);font-weight:700;font-size:14px;margin-top:8px}
+/* about: 3 points */
+.pt{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.p{background:#fff;border-radius:200px 200px 22px 22px;padding:70px 30px 34px;text-align:center}
+.p .n{font-family:"Syne",sans-serif;font-weight:700;font-size:44px;color:var(--terra2);line-height:1}
+.p h3{font-size:18px;font-weight:700;margin:12px 0 8px}.p p{font-size:14px;color:var(--soft);text-align:left}
+/* before after */
+.ba{background:var(--rose)}
+.bx{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.bx .im{position:relative;border-radius:22px;overflow:hidden}.bx .im img{width:100%}
+.bx .im span{position:absolute;top:14px;background:#fff;border-radius:999px;padding:3px 14px;font-size:12px;font-weight:700}.bx .im .b{left:14px}.bx .im .a{right:14px;background:var(--terra);color:#fff}
+.bx h2{font-size:clamp(21px,2.3vw,28px);font-weight:700;line-height:1.7;margin-bottom:16px}.bx p{color:var(--soft);font-size:15px;margin-bottom:10px}
+.note{font-size:12px!important}
+/* menu */
+.mn{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.m{display:flex;justify-content:space-between;align-items:center;gap:20px;background:#fff;border-radius:18px;padding:22px 26px;border:1.5px solid transparent;transition:border-color .3s,transform .3s}
+.m:hover{border-color:var(--terra2);transform:translateY(-3px)}
+.m h3{font-size:16px;font-weight:700}.m p{font-size:13px;color:var(--soft)}
+.m .y{font-family:"Syne",sans-serif;font-weight:700;font-size:22px;white-space:nowrap}.m .y small{font-family:"Zen Kaku Gothic New";font-size:11px;font-weight:500;margin-left:2px}
+.m.first{background:var(--terra);color:#fff;grid-column:span 2}.m.first p{color:#F8E3DA}
+/* staff + gallery */
+.sg{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.sf{background:#fff;border-radius:22px;overflow:hidden}.sf img{aspect-ratio:4/3;object-fit:cover;width:100%}.sf div{padding:24px 26px}
+.sf .it{color:var(--terra);font-size:20px}.sf h3{font-size:20px;font-weight:700;margin:2px 0 8px}.sf p{font-size:14px;color:var(--soft)}
+.gl{display:grid;grid-template-columns:1fr 1fr;gap:14px}.gl img{border-radius:18px;aspect-ratio:1/1;object-fit:cover;width:100%}
+/* reserve */
+.rs{background:var(--ink);color:#fff;border-radius:40px;margin:0 24px 30px;padding:80px 30px;text-align:center}
+.rs .syne{font-size:clamp(44px,6vw,80px);line-height:1}.rs .syne i{font-style:normal;color:var(--terra2)}
+.rs p{color:#D9C8C0;margin:16px 0 28px}
+.rs .btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn{min-width:220px;padding:15px 24px;border-radius:999px;font-weight:700;font-size:14px;background:var(--terra2);color:var(--ink)}.btn.o{background:none;border:1.5px solid #fff;color:#fff}
+.inf{margin-top:34px;font-size:13px;color:#BFAFA8}
+footer{text-align:center;padding:10px 20px 34px;font-size:11px;color:var(--soft)}
+.js .r{opacity:0;transform:translateY(24px);transition:opacity 1s,transform 1s}.js .r.on{opacity:1;transform:none}
+@media(max-width:860px){
+ header{padding:14px 18px}header nav{display:none}.logo{font-size:26px}
+ .hero{grid-template-columns:1fr;padding:10px 20px 60px;gap:30px}.archs{height:420px}.archs .badge{width:96px;height:96px;font-size:11px;left:14%}.archs .badge b{font-size:20px}
+ section{padding:76px 0}.wrap{padding:0 20px}
+ .pt,.bx,.sg,.mn{grid-template-columns:1fr}.m.first{grid-column:auto}.m{flex-direction:column;align-items:flex-start;gap:6px}
+ .rs{margin:0 12px 24px;padding:60px 22px;border-radius:28px}
+}
+@media(prefers-reduced-motion:reduce){.mq div{animation:none}.js .r{opacity:1;transform:none;transition:none}}
+</style></head><body>
+<header><a class="logo syne" href="#">Arc<i>.</i></a><nav><a href="#about">About</a><a href="#ba">Before / After</a><a href="#menu">Menu</a><a href="#staff">Staff</a></nav><a class="rsv" href="#reserve">Reserve</a></header>
+
+<div class="hero">
+ <div>
+  <div class="big syne"><span class="o">Brow</span><span>Design</span><span class="t">Studio.</span></div>
+  <h1>眉が整うと、顔の印象が変わる。</h1>
+  <p>骨格と、なりたい雰囲気から考える、アイブロウ専門サロン。</p>
+  <a class="cta" href="#reserve">初回のご予約 <b>→</b></a>
+ </div>
+ <div class="archs"><div class="a1" role="img" aria-label="眉の整ったモデル"></div><div class="a2" role="img" aria-label="眉のアップ"></div><div class="badge"><span>初回<b>¥4,950</b></span></div></div>
+</div>
+
+<div class="mq" aria-hidden="true"><div>Brow Styling<span>✦</span>Wax<span>✦</span>Brow Lamination<span>✦</span>Counseling<span>✦</span>Brow Styling<span>✦</span>Wax<span>✦</span>Brow Lamination<span>✦</span>Counseling<span>✦</span></div></div>
+
+<section id="about"><div class="wrap">
+ <div class="hd r"><div class="syne">About Arc.</div><p>Arc. が大切にしていること</p></div>
+ <div class="pt">
+  <div class="p r"><div class="n">01</div><h3>骨格から考える</h3><p>目と眉の距離、骨の位置を見ながら、その方に合う形をご提案します。</p></div>
+  <div class="p r"><div class="n">02</div><h3>描き方もお伝え</h3><p>施術のあとに、ご自宅での描き方をお伝えします。毎朝のメイクが楽になるように。</p></div>
+  <div class="p r"><div class="n">03</div><h3>やさしいワックス</h3><p>肌の状態を確かめてから、必要な部分だけ。不安なことは何でもご相談ください。</p></div>
+ </div>
+</div></section>
+
+<section class="ba" id="ba"><div class="wrap">
+ <div class="bx">
+  <div class="im r"><img src="../img/ls_ba.jpg" alt="施術前と施術後の眉"><span class="b">Before</span><span class="a">After</span></div>
+  <div class="r"><div class="hd" style="margin-bottom:20px"><div class="syne">Before / After</div></div><h2>眉山の位置と長さを整えて、<br>やわらかな印象に。</h2><p>アイブロウスタイリング＋ラミネーション（60分）</p><p class="note">※仕上がりには個人差があります。写真はイメージです。</p></div>
+ </div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+ <div class="hd r"><div class="syne">Menu</div><p>メニューと料金（税込）</p></div>
+ <div class="mn">
+  <div class="m first r"><div><h3>はじめての方｜アイブロウスタイリング</h3><p>カウンセリング・ワックス・描き方のアドバイスつき</p></div><div class="y">¥4,950</div></div>
+  <div class="m r"><div><h3>アイブロウスタイリング</h3><p>2回目以降の方・45分</p></div><div class="y">¥6,600</div></div>
+  <div class="m r"><div><h3>眉ラミネーション＋スタイリング</h3><p>毛流れを整える・60分</p></div><div class="y">¥9,900</div></div>
+  <div class="m r"><div><h3>メンズアイブロウ</h3><p>自然な仕上がりに・40分</p></div><div class="y">¥5,500</div></div>
+  <div class="m r"><div><h3>まつげパーマ（同時施術）</h3><p>眉とあわせて・プラス30分</p></div><div class="y">¥4,400</div></div>
+ </div>
+</div></section>
+
+<section id="staff" style="padding-top:0"><div class="wrap">
+ <div class="hd r"><div class="syne">Staff &amp; Gallery</div><p>スタッフとサロンの様子</p></div>
+ <div class="sg">
+  <div class="sf r"><img src="../img/ls_staff.jpg" alt="アイブロウリスト"><div><div class="it">Brow designer</div><h3>早川 れい</h3><p>メイクアップアーティストをへて、眉の専門家に。「眉ひとつで、毎朝が少し楽しくなる」お手伝いをしています。</p></div></div>
+  <div class="gl r"><img src="../img/ls_treat.jpg" alt="施術中"><img src="../img/nl_brow.jpg" alt="眉のアップ"><img src="../img/ls_entrance.jpg" alt="エントランス"><img src="../img/ls_hero.jpg" alt="仕上がり"></div>
+ </div>
+</div></section>
+
+<div class="rs" id="reserve">
+ <div class="syne r">Reserve<i>.</i></div>
+ <p class="r">完全予約制です。空き状況を見ながらご予約いただけます。</p>
+ <div class="btns r"><a class="btn" href="#reserve">Webで予約する</a><a class="btn o" href="#reserve">LINEで予約する</a></div>
+ <p class="inf r">営業時間 10:00–20:00｜定休日 月曜｜都内（駅から徒歩3分・ご予約時にご案内）</p>
+</div>
+<footer>※架空のお店のデモサイトです｜制作：Muse Web.　© Arc.</footer>
+<script>
+document.documentElement.classList.add('js');
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{threshold:.1});
+document.querySelectorAll('.r').forEach(function(e){io.observe(e)});
+setTimeout(function(){document.querySelectorAll('.r').forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('on')})},1200);})();
+</script>
+</body></html>

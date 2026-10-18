@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lisse｜美容脱毛サロン（デモ）</title><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Lisse：白×ペールブルーグレー×淡いピンク。すりガラスのカード・丸い写真・部位の料金タブ。明るく清潔 */
+:root{--bg:#F6F7F9;--blue:#8A9BAE;--blue2:#C9D3DD;--pink:#E8B9B9;--pink2:#F7E6E5;--ink:#3E4855;--soft:#7D8794;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",sans-serif;line-height:1.95;letter-spacing:.05em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0;font-weight:500}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.mi{font-family:"Zen Old Mincho",serif}
+.ln{display:inline-block}
+header{position:sticky;top:0;z-index:9;background:rgba(246,247,249,.8);backdrop-filter:blur(10px);border-bottom:1px solid #E6EAEE}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font-family:"Bodoni Moda",serif;font-size:28px;letter-spacing:.06em;color:var(--ink)}.logo small{font-family:Marcellus;font-size:9px;letter-spacing:.4em;color:var(--soft);margin-left:10px}
+nav{display:flex;align-items:center;gap:26px;font-size:13px;color:var(--soft)}nav a.b{background:var(--ink);color:#fff;padding:8px 20px;border-radius:999px}
+/* hero */
+.hero{position:relative;padding:60px 0 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-12%;top:-30%;width:70vw;height:70vw;border-radius:50%;background:radial-gradient(circle,var(--pink2),transparent 65%);z-index:-1}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:40px}
+.hero .en{font-family:Marcellus;font-size:13px;letter-spacing:.4em;color:var(--blue)}
+.hero h1{font-family:"Zen Old Mincho",serif;font-size:clamp(30px,3.8vw,50px);line-height:1.6;letter-spacing:.06em;margin:18px 0}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--pink2) 62%)}
+.hero p{color:var(--soft);font-size:15px}
+.price{display:flex;align-items:center;gap:18px;margin:28px 0 30px;background:rgba(255,255,255,.75);backdrop-filter:blur(8px);border:1px solid #E7ECF0;border-radius:18px;padding:16px 22px;width:fit-content;box-shadow:0 12px 30px rgba(120,135,155,.12)}
+.price .t{font-size:12px;color:#fff;background:var(--pink);padding:3px 12px;border-radius:999px}
+.price b{font-family:"Bodoni Moda",serif;font-weight:400;font-size:44px;line-height:1}.price small{font-size:12px;color:var(--soft)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;padding:16px 34px;border-radius:999px;font-size:15px;letter-spacing:.12em;box-shadow:0 10px 24px rgba(62,72,85,.25)}
+.btn::after{content:"→"}
+.hero .im{position:relative}
+.hero .im .main{border-radius:46% 54% 50% 50%/42% 44% 56% 58%;aspect-ratio:1/1;object-fit:cover;width:100%;box-shadow:0 30px 60px rgba(120,135,155,.18)}
+.hero .im .chip{position:absolute;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-radius:14px;padding:10px 16px;font-size:13px;box-shadow:0 10px 24px rgba(120,135,155,.15)}
+.hero .im .chip b{color:var(--blue)}
+section{padding:100px 0}
+.ttl{text-align:center;margin-bottom:50px}.ttl .en{font-family:"Bodoni Moda",serif;font-style:italic;font-size:22px;color:var(--blue)}.ttl h2{font-family:"Zen Old Mincho",serif;font-size:clamp(22px,2.6vw,32px);letter-spacing:.1em}
+/* points */
+.pts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pt{background:#fff;border-radius:24px;padding:34px 28px;box-shadow:0 16px 40px rgba(120,135,155,.1)}
+.pt .n{font-family:"Bodoni Moda",serif;font-size:42px;color:var(--blue2);line-height:1}
+.pt h3{font-family:"Zen Old Mincho",serif;font-size:19px;margin:10px 0}.pt p{font-size:14px;color:var(--soft)}
+/* price tabs (CSS only) */
+.tabs{max-width:860px;margin:0 auto;background:#fff;border-radius:24px;padding:30px;box-shadow:0 16px 40px rgba(120,135,155,.1)}
+.tabs input{display:none}
+.tabs label{display:inline-block;padding:9px 22px;border-radius:999px;font-size:14px;cursor:pointer;color:var(--soft);border:1px solid #E1E6EB;margin:0 6px 10px 0}
+#t1:checked~.lb label[for=t1],#t2:checked~.lb label[for=t2],#t3:checked~.lb label[for=t3]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pn{display:none}#t1:checked~.p1,#t2:checked~.p2,#t3:checked~.p3{display:block}
+.pn .r{display:flex;justify-content:space-between;padding:15px 6px;border-bottom:1px solid #EEF1F4;font-size:15px}.pn .r b{font-family:"Bodoni Moda",serif;font-weight:400;font-size:20px}
+.pn .r .f{font-size:11px;color:#fff;background:var(--pink);border-radius:999px;padding:1px 9px;margin-left:8px}
+.tabs .note{font-size:12px;color:var(--soft);margin-top:14px}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.gal img{aspect-ratio:3/4;object-fit:cover;border-radius:200px 200px 16px 16px}
+.gal img:nth-child(even){margin-top:40px}
+/* steps */
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+.st::before{content:"";position:absolute;left:12%;right:12%;top:30px;height:1px;background:var(--blue2)}
+.st div{text-align:center;position:relative}
+.st b{display:flex;width:60px;height:60px;margin:0 auto 14px;align-items:center;justify-content:center;border-radius:50%;background:#fff;border:1px solid var(--blue2);font-family:"Bodoni Moda",serif;font-weight:400;font-size:22px;color:var(--blue)}
+.st h3{font-size:16px}.st p{font-size:13px;color:var(--soft)}
+/* faq */
+.faq{max-width:800px;margin:0 auto;display:grid;gap:12px}
+.faq details{background:#fff;border-radius:16px;padding:18px 24px}.faq summary{cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between}
+.faq summary::after{content:"＋";color:var(--blue)}.faq details[open] summary::after{content:"−"}
+.faq p{font-size:14px;color:var(--soft);margin-top:10px}
+/* cta */
+.cta{text-align:center;background:linear-gradient(135deg,#EEF2F6,var(--pink2));border-radius:36px;padding:70px 24px;margin:0 24px 80px}
+.cta h2{font-family:"Zen Old Mincho",serif;font-size:clamp(22px,2.6vw,32px);letter-spacing:.08em}.cta p{color:var(--soft);font-size:14px;margin:10px 0 28px}
+footer{text-align:center;padding:0 20px 30px;font-size:11px;color:var(--soft)}
+@media(max-width:860px){
+ nav a:not(.b){display:none}
+ .hero{padding:30px 0 60px}.hero .wrap,.pts,.st{grid-template-columns:1fr}.hero .im{order:-1;max-width:420px;margin:0 auto}
+ .gal{grid-template-columns:1fr 1fr}.st::before{display:none}
+ section{padding:70px 0}.price b{font-size:36px}
+}
+</style></head><body>
+<header><div class="wrap"><a class="logo" href="#">Lisse<small>WAXING &amp; SKIN</small></a><nav><a href="#point">選ばれる理由</a><a href="#price">料金</a><a href="#flow">流れ</a><a class="b" href="#cta">予約する</a></nav></div></header>
+
+<div class="hero"><div class="wrap">
+ <div>
+  <div class="en">BEAUTY WAXING SALON</div>
+  <h1><span class="ln">触れたくなる</span><span class="ln">素肌を、</span><br><em>自分のペースで。</em></h1>
+  <p>完全予約制・女性スタッフのみ。<br>肌の様子を見ながら、ていねいにお手入れします。</p>
+  <div class="price"><span class="t">はじめての方</span><div><b>¥2,980</b><small>　両ワキ＋Vライン（税込）</small></div></div>
+  <a class="btn" href="#cta">初回の予約をする</a>
+ </div>
+ <div class="im"><img class="main" src="hero.jpg" alt="バスローブ姿でほほえむ女性" style="object-position:22% center">
+  <div class="chip" style="left:-4%;top:18%">女性スタッフ<b>のみ</b></div>
+  <div class="chip" style="right:2%;bottom:14%">個室で<b>着替えも安心</b></div></div>
+</div></div>
+
+<section id="point" style="padding-top:20px"><div class="wrap">
+ <div class="ttl"><div class="en">Point</div><h2>Lisse が選ばれる理由</h2></div>
+ <div class="pts">
+  <div class="pt"><div class="n">01</div><h3>肌に合わせて</h3><p>毎回、肌の乾燥や赤みをチェック。その日の状態に合わせて出力やお手入れを調整します。</p></div>
+  <div class="pt"><div class="n">02</div><h3>しつこい勧誘なし</h3><p>コースのご案内はご希望の方だけに。1回ずつのお支払いでも通っていただけます。</p></div>
+  <div class="pt"><div class="n">03</div><h3>アフターケアまで</h3><p>施術後は保湿ケアをして、お家でのお手入れ方法もお伝えします。</p></div>
+ </div>
+</div></section>
+
+<section id="price" style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="en">Price</div><h2>料金</h2></div>
+ <div class="tabs">
+  <input type="radio" name="t" id="t1" checked><input type="radio" name="t" id="t2"><input type="radio" name="t" id="t3">
+  <div class="lb"><label for="t1">人気の部位</label><label for="t2">お顔</label><label for="t3">セット</label></div>
+  <div class="pn p1"><div class="r"><span>両ワキ<span class="f">初回</span></span><b>¥980</b></div><div class="r"><span>両ひじ下</span><b>¥4,400</b></div><div class="r"><span>両ひざ下</span><b>¥6,600</b></div><div class="r"><span>VIO</span><b>¥8,800</b></div></div>
+  <div class="pn p2"><div class="r"><span>鼻下</span><b>¥1,650</b></div><div class="r"><span>フェイス全体</span><b>¥5,500</b></div><div class="r"><span>えりあし</span><b>¥2,200</b></div></div>
+  <div class="pn p3"><div class="r"><span>両ワキ＋Vライン<span class="f">初回</span></span><b>¥2,980</b></div><div class="r"><span>腕＋脚セット</span><b>¥12,100</b></div><div class="r"><span>全身（顔・VIOなし）</span><b>¥18,700</b></div></div>
+  <p class="note">表示はすべて税込です。肌の状態によって、施術をお休みしていただく場合があります。</p>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="en">Salon</div><h2>サロンのようす</h2></div>
+ <div class="gal"><img src="p1.jpg" alt="白い個室"><img src="p2.jpg" alt="保湿ケア"><img src="p3.jpg" alt="スキンケアのボトル"><img src="p4.jpg" alt="ほほえむ女性"></div>
+</div></section>
+
+<section id="flow" style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="en">Flow</div><h2>はじめての方の流れ</h2></div>
+ <div class="st">
+  <div><b>1</b><h3>ご予約</h3><p>Web・LINEから24時間受付。</p></div>
+  <div><b>2</b><h3>カウンセリング</h3><p>肌の状態やご希望をうかがいます。</p></div>
+  <div><b>3</b><h3>お手入れ</h3><p>冷やしながら、ていねいに。</p></div>
+  <div><b>4</b><h3>保湿ケア</h3><p>お家でのケアもお伝えします。</p></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="en">Q&amp;A</div><h2>よくあるご質問</h2></div>
+ <div class="faq">
+  <details><summary>痛みはありますか？</summary><p>感じ方には個人差があります。冷やしながら行い、出力も相談しながら調整しますので、遠慮なくお伝えください。</p></details>
+  <details><summary>何回くらい通えばいいですか？</summary><p>毛の量や部位によって変わります。カウンセリングで目安をお伝えしますが、ご自身のペースで決めていただけます。</p></details>
+  <details><summary>生理中でも予約できますか？</summary><p>VIO以外の部位であれば施術できます。体調がすぐれない時は、お気軽に日程を変更してください。</p></details>
+ </div>
+</div></section>
+
+<div class="cta" id="cta"><h2>まずは、両ワキ＋Vラインから。</h2><p>はじめての方限定 ¥2,980（税込）｜カウンセリングだけのご来店もOK</p><a class="btn" href="#cta">初回の予約をする</a></div>
+<footer>※架空のお店のデモサイトです｜制作：Muse Web.　© Lisse</footer>
+</body></html>

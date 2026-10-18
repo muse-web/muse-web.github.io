@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-fTxRGByfycDFMR1DUpgr07vH7xq4e0q/hC5PpV7yKs8='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuance｜ネイルサロン 公式サイト（デモ）</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Klee+One:wght@400;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Nuance：モカ×ミルクのカフェのようなネイルサロン。ポラロイド風に重なる写真と、丸みのある文字 */
+:root{--mocha:#8B6B5A;--choco:#4A3830;--milk:#F6EFE7;--cream:#FFFBF6;--latte:#E7D8C8;--pink:#E9C9C1;--soft:#8D7A70;--line:#E6D9CB}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--choco);font-family:"Zen Maru Gothic",sans-serif;line-height:1.95;letter-spacing:.05em;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0;font-weight:500}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{display:flex;align-items:center;justify-content:space-between;padding:20px 30px}
+.logo{font-family:"DM Serif Display",serif;font-style:italic;font-size:30px;color:var(--mocha)}
+header nav{display:flex;gap:6px;background:#fff;border-radius:999px;padding:5px;box-shadow:0 4px 16px rgba(74,56,48,.06)}
+header nav a{font-size:13px;padding:7px 16px;border-radius:999px}header nav a:hover{background:var(--milk)}
+header .rsv{background:var(--choco);color:#fff;padding:10px 22px;border-radius:999px;font-size:13px}
+/* top */
+.top{position:relative;padding:40px 0 90px;overflow:hidden}
+.top .big{position:absolute;left:50%;top:60%;translate:-50% -50%;font-family:"DM Serif Display",serif;font-style:italic;font-size:clamp(120px,22vw,300px);color:var(--latte);line-height:1;white-space:nowrap;pointer-events:none}
+.pols{position:relative;height:520px;max-width:980px;margin:0 auto}
+.pol{position:absolute;background:#fff;padding:12px 12px 44px;box-shadow:0 16px 34px rgba(74,56,48,.14);transition:transform .5s}
+.pol img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.pol span{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:"Klee One",cursive;font-size:15px;color:var(--soft)}
+.p1{left:4%;top:60px;width:250px;rotate:-7deg}.p2{left:36%;top:0;width:290px;rotate:2deg;z-index:2}.p3{right:4%;top:80px;width:250px;rotate:6deg}
+.pol:hover{transform:translateY(-8px) scale(1.02)}
+.catch{position:relative;text-align:center;margin-top:90px}
+.catch h1{font-family:"Klee One",cursive;font-weight:600;font-size:clamp(24px,3vw,34px);letter-spacing:.12em}
+.catch p{color:var(--soft);font-size:15px;margin-top:8px}
+/* sections */
+section{padding:100px 0}
+.hd{text-align:center;margin-bottom:46px}
+.hd .en{font-family:"DM Serif Display",serif;font-style:italic;font-size:44px;color:var(--mocha);line-height:1.1}
+.hd p{font-size:14px;color:var(--soft)}
+/* about */
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.ab img{border-radius:240px 240px 24px 24px;aspect-ratio:4/5;object-fit:cover}
+.ab h2{font-family:"Klee One",cursive;font-weight:600;font-size:clamp(21px,2.3vw,27px);line-height:1.9;margin-bottom:20px}
+.ab p{color:var(--soft);font-size:15px;margin-bottom:12px}
+.pts{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pts span{background:var(--milk);border-radius:999px;padding:6px 16px;font-size:13px}
+/* menu: カフェのメニューボード */
+.mn{background:var(--milk)}
+.board{max-width:860px;margin:0 auto;background:var(--choco);color:#F6EFE7;border-radius:22px;padding:50px 56px;box-shadow:0 20px 40px rgba(74,56,48,.18)}
+.board h3{font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;font-size:26px;color:var(--pink);margin:0 0 12px}
+.board .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px 56px}
+.row{display:flex;align-items:baseline;gap:10px;font-size:15px;padding:7px 0}
+.row i{flex:1;border-bottom:1px dotted rgba(246,239,231,.4);translate:0 -4px}
+.row b{font-family:"DM Serif Display",serif;font-weight:400;font-size:18px}
+.board small{display:block;color:#CDBBAE;font-size:12px;margin-top:20px;text-align:center}
+.off{display:inline-block;margin:30px auto 0;background:var(--pink);color:var(--choco);border-radius:16px;padding:16px 30px;font-size:15px}
+.ctr{text-align:center}
+/* design gallery: masonry */
+.mas{columns:4 220px;column-gap:14px}
+.mas figure{margin:0 0 14px;break-inside:avoid;position:relative;border-radius:16px;overflow:hidden}
+.mas img{width:100%}
+.mas figcaption{position:absolute;left:10px;bottom:10px;background:rgba(255,251,246,.9);border-radius:999px;padding:3px 12px;font-size:12px}
+/* staff */
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.sc{background:#fff;border-radius:22px;padding:26px;text-align:center;box-shadow:0 8px 24px rgba(74,56,48,.06)}
+.sc img{width:130px;height:130px;border-radius:50%;object-fit:cover;margin:0 auto 14px}
+.sc h3{font-size:17px}.sc .ro{font-size:12px;color:var(--mocha)}.sc p{font-size:13px;color:var(--soft);margin-top:8px;text-align:left}
+/* access & reserve */
+.acs{background:var(--milk)}
+.ax{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.ax img{border-radius:22px;aspect-ratio:16/10;object-fit:cover}
+.ax dl{margin:0}.ax dl div{display:flex;gap:16px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:14px}.ax dt{width:86px;flex:none;color:var(--mocha)}.ax dd{margin:0}
+.rs{text-align:center}.rs .btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:24px}
+.btn{min-width:220px;padding:15px 24px;border-radius:999px;font-size:15px;background:var(--choco);color:#fff}.btn.l{background:#06C755}
+footer{text-align:center;padding:26px 20px 34px;font-size:11px;color:var(--soft)}
+.js .r{opacity:0;transform:translateY(20px);transition:opacity .9s,transform .9s}.js .r.on{opacity:1;transform:none}
+@media(max-width:820px){
+ header{padding:14px 16px}header nav{display:none}.logo{font-size:26px}
+ .top{padding:20px 0 60px}.catch{margin-top:40px}.pols{height:360px}.p1{width:150px;left:2%;top:50px}.p2{width:180px;left:28%;top:0}.p3{width:150px;right:2%;top:70px}
+ .pol{padding:7px 7px 30px}.pol span{font-size:12px;bottom:7px}
+ section{padding:70px 0}.ab{grid-template-columns:1fr;gap:30px}.board{padding:34px 22px}.board .cols{grid-template-columns:1fr;gap:6px}
+ .st{grid-template-columns:1fr}.ax{grid-template-columns:1fr}.mas{columns:2 140px}
+ .hd .en{font-size:36px}
+}
+@media(prefers-reduced-motion:reduce){.js .r{opacity:1;transform:none;transition:none}}
+</style></head><body>
+<header><a class="logo" href="#top">Nuance</a><nav><a href="#about">About</a><a href="#menu">Menu</a><a href="#design">Design</a><a href="#staff">Staff</a><a href="#access">Access</a></nav><a class="rsv" href="#reserve">ご予約</a></header>
+
+<div class="top" id="top">
+ <div class="big" aria-hidden="true">Nuance</div>
+ <div class="pols">
+  <div class="pol p1"><img src="../img/nl_magnet.jpg" alt="マグネットネイル"><span>magnet</span></div>
+  <div class="pol p2"><img src="../img/nl_mocha.jpg" alt="モカカラーのネイル"><span>mocha latte</span></div>
+  <div class="pol p3"><img src="../img/nl_french.jpg" alt="フレンチネイル"><span>french</span></div>
+ </div>
+ <div class="catch"><h1>指先から、ちょっといい日に。</h1><p>大人のニュアンスネイルと、カフェのような時間</p></div>
+</div>
+
+<section id="about"><div class="wrap">
+ <div class="ab">
+  <img class="r" src="../img/nl_room.jpg" alt="明るいサロン">
+  <div class="r">
+   <div class="hd" style="text-align:left;margin-bottom:18px"><div class="en">About</div></div>
+   <h2>オフィスでも浮かない、<br>でも、ちゃんと気分が上がる。</h2>
+   <p>Nuance（ニュアンス）は、肌なじみのよい色づかいが得意なネイルサロンです。</p>
+   <p>ドリンクを飲みながら、ゆっくり色選びからご一緒します。爪が薄い・欠けやすいなどのお悩みもお聞かせください。</p>
+   <div class="pts"><span>完全予約制</span><span>個室席あり</span><span>持ち込みデザインOK</span><span>ドリンク付き</span></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="mn" id="menu"><div class="wrap">
+ <div class="hd r"><div class="en">Menu</div><p>メニューと料金（税込）</p></div>
+ <div class="board r">
+  <div class="cols">
+   <div><h3>Hand</h3>
+    <div class="row">ワンカラー<i></i><b>¥5,500</b></div>
+    <div class="row">ニュアンスアート<i></i><b>¥7,700</b></div>
+    <div class="row">マグネット<i></i><b>¥7,150</b></div>
+    <div class="row">定額デザイン（月替わり）<i></i><b>¥8,800</b></div></div>
+   <div><h3>Foot &amp; Care</h3>
+    <div class="row">フットワンカラー<i></i><b>¥6,600</b></div>
+    <div class="row">ハンドケアのみ<i></i><b>¥3,850</b></div>
+    <div class="row">他店オフ<i></i><b>¥1,100</b></div>
+    <div class="row">長さ出し（1本）<i></i><b>¥550</b></div></div>
+  </div>
+  <small>※ジェルの付け替えの方は、オフ代込みの料金です</small>
+ </div>
+ <div class="ctr"><span class="off r">はじめての方は、ハンドメニュー全品 ¥1,100 OFF</span></div>
+</div></section>
+
+<section id="design"><div class="wrap">
+ <div class="hd r"><div class="en">Design</div><p>デザインギャラリー</p></div>
+ <div class="mas r">
+  <figure><img src="../img/nl_art.jpg" alt=""><figcaption>ラベンダーパール</figcaption></figure>
+  <figure><img src="../img/nl_hand.jpg" alt=""><figcaption>シアーベージュ</figcaption></figure>
+  <figure><img src="../img/ig_nail_latte.jpg" alt=""><figcaption>ブラウン</figcaption></figure>
+  <figure><img src="../img/nail_sub.jpg" alt=""><figcaption>ピンクカラー</figcaption></figure>
+  <figure><img src="../img/nl_magnet.jpg" alt=""><figcaption>マグネット</figcaption></figure>
+  <figure><img src="../img/nl_bottles.jpg" alt=""><figcaption>くすみカラー</figcaption></figure>
+  <figure><img src="../img/nail_hero.jpg" alt=""><figcaption>パールアート</figcaption></figure>
+  <figure><img src="../img/nl_french.jpg" alt=""><figcaption>フレンチ</figcaption></figure>
+ </div>
+</div></section>
+
+<section id="staff" style="padding-top:20px"><div class="wrap">
+ <div class="hd r"><div class="en">Staff</div><p>ネイリスト</p></div>
+ <div class="st">
+  <div class="sc r"><img src="../img/ls_staff.jpg" alt=""><h3>森下 ゆう</h3><div class="ro">Owner / Nailist</div><p>ネイリスト歴11年。肌なじみのよい色合わせが得意です。</p></div>
+  <div class="sc r"><img src="../img/ls_model.jpg" alt=""><h3>小野 みお</h3><div class="ro">Nailist</div><p>細かいアートとマグネットにこだわりがあります。</p></div>
+  <div class="sc r"><img src="../img/ls_hero.jpg" alt=""><h3>高瀬 りな</h3><div class="ro">Nailist / Care</div><p>爪のお悩み相談とハンドケアを担当しています。</p></div>
+ </div>
+</div></section>
+
+<section class="acs" id="access"><div class="wrap">
+ <div class="hd r"><div class="en">Access</div><p>店舗情報</p></div>
+ <div class="ax">
+  <img class="r" src="../img/nl_room.jpg" alt="店内">
+  <dl class="r"><div><dt>営業時間</dt><dd>11:00–21:00</dd></div><div><dt>定休日</dt><dd>火曜日</dd></div><div><dt>場所</dt><dd>都内（駅から徒歩3分。ご予約時にご案内します）</dd></div><div><dt>席数</dt><dd>3席（うち個室1）</dd></div></dl>
+ </div>
+</div></section>
+
+<section class="rs" id="reserve"><div class="wrap">
+ <div class="hd r"><div class="en">Reservation</div><p>ご予約</p></div>
+ <p class="r">空き状況を見ながら、24時間ご予約いただけます。</p>
+ <div class="btns r"><a class="btn" href="#reserve">Webで予約する</a><a class="btn l" href="#reserve">LINEで予約する</a></div>
+</div></section>
+
+<footer>※架空のお店のデモサイトです｜制作：Muse Web.　© Nuance</footer>
+<script>
+document.documentElement.classList.add('js');
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{threshold:.1});
+document.querySelectorAll('.r').forEach(function(e){io.observe(e)});
+setTimeout(function(){document.querySelectorAll('.r').forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('on')})},1200);})();
+</script>
+</body></html>

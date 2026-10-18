@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-fTxRGByfycDFMR1DUpgr07vH7xq4e0q/hC5PpV7yKs8='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>雫 shizuku｜ヘッドスパ専門店 公式サイト（デモ）</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* 雫：深い苔色×生成りの和モダン。水の波紋と、縦に流れる見出し */
+:root{--moss:#3E4A43;--moss2:#55635A;--sand:#EDE7DC;--kinari:#F7F4EE;--ink:#2E332F;--soft:#77796F;--gold:#B79D69;--line:#D9D3C6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--kinari);color:var(--ink);font-family:"Shippori Mincho",serif;line-height:2.1;letter-spacing:.08em;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0;font-weight:400}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+header{position:absolute;inset:0 0 auto 0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:24px 34px;color:#F3EFE6}
+.logo{display:flex;align-items:center;gap:12px}.logo b{font-weight:600;font-size:30px;letter-spacing:.1em}.logo span{font-family:"Marcellus",serif;font-size:12px;letter-spacing:.3em}
+header nav{display:flex;gap:30px;font-size:13px;letter-spacing:.2em}
+/* hero */
+.hero{position:relative;height:100vh;min-height:620px;background:url(../img/hair_sub.jpg) center/cover;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,48,43,.72),rgba(40,48,43,.25) 60%,rgba(40,48,43,.05))}
+.hero .tx{position:absolute;left:9%;top:50%;translate:0 -50%;display:flex;gap:30px;color:#F3EFE6}
+.hero h1{writing-mode:vertical-rl;font-size:clamp(26px,2.8vw,38px);letter-spacing:.34em;line-height:2.1}
+.hero .sub{writing-mode:vertical-rl;font-size:14px;letter-spacing:.3em;opacity:.85;padding-top:80px}
+.ripple{position:absolute;right:12%;bottom:14%;width:180px;height:180px}
+.ripple i{position:absolute;inset:0;border:1px solid rgba(243,239,230,.6);border-radius:50%;animation:rp 6s ease-out infinite}
+.ripple i:nth-child(2){animation-delay:2s}.ripple i:nth-child(3){animation-delay:4s}
+@keyframes rp{from{transform:scale(.2);opacity:1}to{transform:scale(1.4);opacity:0}}
+/* sections */
+section{padding:120px 0}
+.ttl{display:flex;gap:26px;align-items:flex-start;margin-bottom:54px}
+.ttl .v{writing-mode:vertical-rl;white-space:nowrap;font-size:24px;letter-spacing:.4em;color:var(--moss);border-left:1px solid var(--gold);padding-left:12px;line-height:1.6}
+.ttl .e{font-family:"Marcellus",serif;font-size:13px;letter-spacing:.34em;color:var(--gold);padding-top:4px}
+/* concept */
+.cp{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.cp h2{font-size:clamp(21px,2.3vw,28px);letter-spacing:.16em;line-height:2;margin-bottom:24px}
+.cp p{font-size:15px;color:var(--soft);margin-bottom:14px}
+.cp .ims{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end}.cp .ims img{aspect-ratio:3/4;object-fit:cover}.cp .ims img:last-child{margin-bottom:-60px}
+/* course */
+.course{background:var(--moss);color:#EFEAE0}
+.course .ttl .v{color:#EFEAE0}
+.cs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(239,234,224,.15)}
+.c{background:var(--moss);padding:46px 34px;position:relative}
+.c .n{font-family:"Marcellus",serif;font-size:56px;color:rgba(183,157,105,.45);line-height:1}
+.c h3{font-size:20px;letter-spacing:.16em;margin:8px 0 6px}.c .t{font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;color:var(--gold);letter-spacing:.14em}
+.c p{font-size:14px;color:#C9C6BA;margin:14px 0 22px}
+.c .y{font-family:"Marcellus",serif;font-size:26px}.c .y small{font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;margin-left:4px;color:#C9C6BA}
+.c.rec::after{content:"人気";position:absolute;right:24px;top:24px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;background:var(--gold);color:var(--moss);padding:2px 12px;border-radius:999px}
+.opt{margin-top:30px;font-size:14px;color:#C9C6BA;text-align:center}
+/* flow */
+.fl{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:f}
+.f{border-top:1px solid var(--gold);padding-top:20px}
+.f::before{counter-increment:f;content:"0" counter(f);font-family:"Marcellus",serif;color:var(--gold);font-size:14px;letter-spacing:.2em}
+.f h3{font-size:17px;margin:6px 0 6px;letter-spacing:.12em}.f p{font-size:13px;color:var(--soft)}
+/* space */
+.sp{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+.sp img{width:100%;height:100%;object-fit:cover}.sp .col{display:grid;gap:14px}
+/* staff */
+.stf{display:grid;grid-template-columns:auto 1fr;gap:50px;align-items:center;background:var(--sand);padding:46px}
+.stf img{width:240px;aspect-ratio:3/4;object-fit:cover}
+.stf .e{font-family:"Marcellus",serif;font-size:12px;letter-spacing:.3em;color:var(--gold)}
+.stf h3{font-size:24px;letter-spacing:.24em;margin:4px 0 14px}.stf p{font-size:14px;color:var(--soft)}
+/* access/reserve */
+.ar{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.ar dl{margin:0}.ar dl div{display:grid;grid-template-columns:100px 1fr;padding:13px 0;border-bottom:1px solid var(--line);font-size:14px}.ar dt{color:var(--moss2);font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;letter-spacing:.14em}.ar dd{margin:0}
+.rsv{background:var(--moss);color:#EFEAE0;padding:40px 34px;text-align:center}
+.rsv h3{font-size:20px;letter-spacing:.2em}.rsv p{font-size:13px;color:#C9C6BA;margin:8px 0 22px}
+.btn{display:block;padding:14px;margin-top:10px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:14px;letter-spacing:.16em;border:1px solid var(--gold)}.btn.f{background:var(--gold);color:var(--moss)}
+footer{text-align:center;padding:30px 20px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;color:var(--soft)}
+.js .r{opacity:0;transform:translateY(22px);transition:opacity 1.2s,transform 1.2s}.js .r.on{opacity:1;transform:none}
+@media(max-width:860px){
+ header{padding:16px 18px}header nav{display:none}.logo b{font-size:24px}
+ .hero{height:86vh;min-height:520px}.hero .tx{left:8%}.hero .sub{display:none}.hero h1{font-size:24px}.ripple{width:120px;height:120px;right:8%}
+ section{padding:80px 0}.wrap{padding:0 20px}
+ .cp,.ar{grid-template-columns:1fr;gap:40px}.cp .ims img:last-child{margin-bottom:0}
+ .cs{grid-template-columns:1fr}.fl{grid-template-columns:1fr 1fr}
+ .sp{grid-template-columns:1fr}.stf{grid-template-columns:1fr;padding:30px 22px;gap:24px}.stf img{width:100%}
+ .ttl .v{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){.ripple i{animation:none;opacity:.4}.js .r{opacity:1;transform:none;transition:none}}
+</style></head><body>
+<header><a class="logo" href="#"><b>雫</b><span>SHIZUKU HEAD SPA</span></a><nav><a href="#concept">雫について</a><a href="#course">コース</a><a href="#flow">流れ</a><a href="#space">空間</a><a href="#access">ご予約</a></nav></header>
+
+<div class="hero" role="img" aria-label="静かなシャンプー台">
+ <div class="tx"><h1>頭をほどくと、<br>心もゆるむ。</h1><p class="sub">ヘッドスパ専門店　雫</p></div>
+ <div class="ripple" aria-hidden="true"><i></i><i></i><i></i></div>
+</div>
+
+<section id="concept"><div class="wrap">
+ <div class="cp">
+  <div class="r"><div class="ttl"><div class="v">雫について</div><div class="e">CONCEPT</div></div>
+   <h2>考えごとで、<br>いっぱいの頭に、ひと休みを。</h2>
+   <p>雫は、ヘッドスパだけを行う専門店です。ふかふかのリクライニングチェアで、温かいお湯とやわらかな手技に身をゆだねてください。</p>
+   <p>途中で眠ってしまう方も多い、静かな時間。終わったあとは、髪をきれいに乾かしてお帰りいただけます。</p></div>
+  <div class="ims r"><img src="../img/ig_hair_back.jpg" alt="ツヤのある髪"><img src="../img/ls_room.jpg" alt="施術スペース"></div>
+ </div>
+</div></section>
+
+<section class="course" id="course"><div class="wrap">
+ <div class="ttl r"><div class="v">コース</div><div class="e">COURSE &amp; PRICE</div></div>
+ <div class="cs r">
+  <div class="c"><div class="n">01</div><h3>ひとしずく</h3><div class="t">45分｜はじめての方に</div><p>シャンプーとヘッドマッサージで、気軽にリフレッシュ。</p><div class="y">¥6,600<small>税込</small></div></div>
+  <div class="c rec"><div class="n">02</div><h3>雫の深呼吸</h3><div class="t">70分｜いちばん人気</div><p>炭酸泉とアロマを組み合わせ、首・肩までゆっくりほぐします。</p><div class="y">¥9,900<small>税込</small></div></div>
+  <div class="c"><div class="n">03</div><h3>満ちる時間</h3><div class="t">100分｜ごほうびに</div><p>デコルテとハンドのケアもついた、いちばん長いコース。</p><div class="y">¥14,300<small>税込</small></div></div>
+ </div>
+ <p class="opt r">オプション：ホットアイマスク ¥550／トリートメント ¥1,650</p>
+</div></section>
+
+<section id="flow"><div class="wrap">
+ <div class="ttl r"><div class="v">流れ</div><div class="e">FLOW</div></div>
+ <div class="fl">
+  <div class="f r"><h3>ご予約</h3><p>Web・LINEから24時間ご予約いただけます。</p></div>
+  <div class="f r"><h3>カウンセリング</h3><p>お疲れの具合や、力加減の好みをうかがいます。</p></div>
+  <div class="f r"><h3>ヘッドスパ</h3><p>照明を落とした個室で、ゆっくりおくつろぎください。</p></div>
+  <div class="f r"><h3>お仕上げ</h3><p>髪を乾かして整え、温かいお茶をお出しします。</p></div>
+ </div>
+</div></section>
+
+<section id="space" style="padding-top:0"><div class="wrap">
+ <div class="ttl r"><div class="v">空間</div><div class="e">SPACE</div></div>
+ <div class="sp r"><img src="../img/hair_hero.jpg" alt="店内"><div class="col"><img src="../img/ls_entrance.jpg" alt="待合"><img src="../img/ig_hair_blow.jpg" alt="お仕上げ"></div></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="stf r"><img src="../img/ls_staff.jpg" alt="スパニスト"><div><div class="e">SPANIST</div><h3>葉山 しずか</h3><p>美容師として10年働いたのち、ヘッドスパの道へ。「肩の力がふっと抜ける瞬間」をつくることを大切にしています。おしゃべりも、静かに過ごすことも、どちらもお好みでどうぞ。</p></div></div>
+</div></section>
+
+<section id="access" style="padding-top:20px"><div class="wrap">
+ <div class="ttl r"><div class="v">ご予約</div><div class="e">ACCESS &amp; RESERVE</div></div>
+ <div class="ar">
+  <dl class="r"><div><dt>営業時間</dt><dd>10:00–21:00（最終受付 19:30）</dd></div><div><dt>定休日</dt><dd>水曜日</dd></div><div><dt>場所</dt><dd>都内（駅から徒歩4分。ご予約時にご案内します）</dd></div><div><dt>個室</dt><dd>2室（完全個室）</dd></div></dl>
+  <div class="rsv r"><h3>ご予約はこちら</h3><p>当日のご予約もお気軽にどうぞ</p><a class="btn f" href="#access">Webで予約する</a><a class="btn" href="#access">LINEで予約する</a></div>
+ </div>
+</div></section>
+
+<footer>※架空のお店のデモサイトです｜制作：Muse Web.　© 雫 shizuku</footer>
+<script>
+document.documentElement.classList.add('js');
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{threshold:.1});
+document.querySelectorAll('.r').forEach(function(e){io.observe(e)});
+setTimeout(function(){document.querySelectorAll('.r').forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('on')})},1200);})();
+</script>
+</body></html>

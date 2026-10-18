@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>courbe｜少人数制ピラティススタジオ（デモ）</title><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet">
+<style>
+/* courbe：テラコッタ×サンド。大きな英字と数字、斜めの切り替え、週間スケジュール表。あたたかく力強い */
+:root{--terra:#B4664B;--terra2:#D9A48C;--sand:#F3EBE1;--sand2:#E8DCCD;--ink:#3B2E29;--soft:#7F6E66;--white:#FFFCF8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Zen Kaku Gothic New",sans-serif;line-height:1.9;letter-spacing:.04em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.en{font-family:Jost,sans-serif}
+header{position:absolute;inset:0 0 auto;z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:80px}
+.logo{font-family:Jost;font-weight:300;font-size:30px;letter-spacing:.08em;color:var(--ink)}.logo small{display:block;font-size:9px;letter-spacing:.42em;color:var(--soft);font-weight:400;margin-top:-6px}
+.tr{font-size:13px;font-weight:500;letter-spacing:.1em;background:var(--terra);color:#fff;padding:11px 24px;border-radius:4px}
+/* hero */
+.hero{position:relative;min-height:100vh;display:grid;grid-template-columns:44% 56%;background:var(--sand)}
+.hero .tx{padding:150px 20px 70px 6vw;display:flex;flex-direction:column;justify-content:center}
+.hero .big{font-family:Jost;font-weight:600;font-size:clamp(64px,8.6vw,132px);line-height:.9;letter-spacing:-.01em;color:var(--terra)}
+.hero .big span{display:block;color:var(--ink);font-weight:300}
+.hero h1{font-size:clamp(20px,2.1vw,27px);font-weight:700;letter-spacing:.08em;margin:30px 0 12px;line-height:1.7}
+.hero p{color:var(--soft);font-size:15px}
+.trial{display:flex;align-items:center;gap:16px;margin-top:32px;flex-wrap:wrap}
+.trial a{background:var(--ink);color:#fff;padding:17px 32px;border-radius:4px;font-weight:500;letter-spacing:.1em}
+.trial span{font-size:13px;color:var(--soft)}.trial b{font-family:Jost;font-size:28px;color:var(--terra);font-weight:500}
+.hero .ph{background:url(hero.jpg) 66% center/cover;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%)}
+.ticker{background:var(--ink);color:var(--sand);white-space:nowrap;overflow:hidden;font-family:Jost;font-size:15px;letter-spacing:.3em;padding:14px 0}
+.ticker div{display:inline-block;animation:tk 30s linear infinite}@keyframes tk{to{transform:translateX(-50%)}}
+section{padding:110px 0}
+.ttl{display:flex;align-items:end;gap:20px;margin-bottom:46px}.ttl .n{font-family:Jost;font-weight:600;font-size:72px;line-height:.8;color:var(--terra2)}
+.ttl h2{font-size:clamp(22px,2.6vw,32px);font-weight:700;letter-spacing:.06em}.ttl .en{display:block;font-size:13px;letter-spacing:.3em;color:var(--terra);font-weight:500}
+/* features */
+.ft{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--sand2)}
+.ft div{padding:34px 30px;border-right:1px solid var(--sand2)}.ft div:last-child{border-right:0}
+.ft b{font-family:Jost;font-size:46px;font-weight:300;color:var(--terra)}.ft b small{font-size:16px;margin-left:4px}
+.ft h3{font-size:18px;margin:6px 0 8px}.ft p{font-size:14px;color:var(--soft)}
+/* photo split */
+.sp{display:grid;grid-template-columns:1fr 1fr;background:var(--sand)}
+.sp .im{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;padding:6px}.sp .im img{width:100%;height:100%;object-fit:cover}
+.sp .im img:first-child{grid-row:span 2}
+.sp .tx{padding:80px 6vw;display:flex;flex-direction:column;justify-content:center}
+.sp h3{font-family:"Shippori Mincho",serif;font-size:clamp(22px,2.4vw,30px);line-height:1.7;margin-bottom:20px}.sp p{color:var(--soft);font-size:15px;margin-bottom:12px}
+/* lessons */
+.ls{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.l{border:1px solid var(--sand2);border-radius:6px;padding:30px 26px;position:relative;background:#fff}
+.l .tg{position:absolute;top:-12px;left:22px;background:var(--terra);color:#fff;font-size:11px;letter-spacing:.14em;padding:3px 12px;border-radius:2px}
+.l h3{font-size:19px;margin-bottom:4px}.l .m{font-family:Jost;font-size:13px;letter-spacing:.2em;color:var(--terra)}
+.l p{font-size:14px;color:var(--soft);margin:12px 0 18px}.l .y{font-family:Jost;font-size:30px;font-weight:500}.l .y small{font-family:"Zen Kaku Gothic New";font-size:12px;color:var(--soft);margin-left:6px}
+/* schedule */
+.sc{overflow-x:auto}.sc table{width:100%;min-width:640px;border-collapse:collapse;font-size:13px;text-align:center}
+.sc th{font-family:Jost;font-weight:500;letter-spacing:.14em;padding:12px;background:var(--ink);color:var(--sand)}
+.sc td{border:1px solid var(--sand2);padding:12px 6px}.sc td.on{background:var(--sand)}.sc td.on b{display:block;color:var(--terra);font-family:Jost;font-weight:500}
+.sc .note{font-size:12px;color:var(--soft);margin-top:12px}
+/* voices */
+.vc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.vc div{background:var(--sand);padding:30px;border-radius:6px;font-size:15px}
+.vc div::before{content:"“";display:block;font-family:Jost;font-size:60px;line-height:.6;color:var(--terra2)}.vc span{display:block;font-size:12px;color:var(--soft);margin-top:12px}
+/* faq */
+.faq details{border-bottom:1px solid var(--sand2);padding:20px 0}.faq summary{cursor:pointer;font-weight:500;list-style:none}.faq summary::before{content:"Q. ";font-family:Jost;color:var(--terra)}
+.faq p{font-size:14px;color:var(--soft);margin-top:8px}
+/* cta */
+.cta{background:var(--terra);color:#fff;padding:90px 0;position:relative;overflow:hidden}
+.cta::after{content:"courbe";position:absolute;right:-2vw;bottom:-5vw;font-family:Jost;font-weight:600;font-size:22vw;line-height:1;opacity:.08}
+.cta .wrap{position:relative;z-index:1}.cta h2{font-size:clamp(26px,3.2vw,40px);font-weight:700;line-height:1.5}.cta p{opacity:.9;margin:14px 0 30px}
+.cta a{display:inline-block;background:#fff;color:var(--terra);padding:17px 36px;border-radius:4px;font-weight:700;letter-spacing:.1em}
+footer{text-align:center;padding:26px;font-size:11px;color:var(--soft)}
+@media(max-width:860px){
+ .tr{padding:9px 16px}
+ .hero{grid-template-columns:1fr;min-height:0}.hero .ph{order:-1;height:58vh;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
+ .hero .tx{padding:30px 24px 60px}
+ header{position:absolute}.logo,.logo small{color:#fff}.logo small{color:rgba(255,255,255,.85)}
+ .ft,.ls,.vc,.sp{grid-template-columns:1fr}.ft div{border-right:0;border-bottom:1px solid var(--sand2)}
+ .sp .im{height:420px}.sp .tx{padding:50px 24px}
+ section{padding:76px 0}.ttl .n{font-size:54px}
+}
+</style></head><body>
+<header><div class="wrap"><a class="logo" href="#">courbe<small>PILATES STUDIO</small></a><a class="tr" href="#cta">体験レッスン</a></div></header>
+
+<div class="hero">
+ <div class="tx">
+  <div class="big">Move<span>gently.</span></div>
+  <h1>ひとり一台のリフォーマーで、<br>自分のからだと向き合う時間。</h1>
+  <p>定員4名の少人数制ピラティススタジオ。<br>運動が久しぶりの方も、自分のペースで始められます。</p>
+  <div class="trial"><a href="#cta">体験レッスンを予約</a><span>はじめての方<br><b>¥3,300</b>（税込）</span></div>
+ </div>
+ <div class="ph" role="img" aria-label="リフォーマーでストレッチをする女性"></div>
+</div>
+<div class="ticker"><div>REFORMER PILATES · SMALL GROUP · PRIVATE LESSON · MAX 4 PEOPLE · REFORMER PILATES · SMALL GROUP · PRIVATE LESSON · MAX 4 PEOPLE · </div></div>
+
+<section><div class="wrap">
+ <div class="ttl"><div class="n">01</div><h2><span class="en">FEATURES</span>courbe の3つのこだわり</h2></div>
+ <div class="ft">
+  <div><b>4<small>名まで</small></b><h3>目の届く少人数制</h3><p>インストラクターが一人ひとりの動きを見ながら、姿勢をていねいにお伝えします。</p></div>
+  <div><b>1<small>人1台</small></b><h3>マシンを使ったレッスン</h3><p>リフォーマーのバネが動きをサポート。マットだけでは難しい動きにも取り組めます。</p></div>
+  <div><b>50<small>分</small></b><h3>通いやすい時間</h3><p>朝7時から夜21時まで。お仕事の前後やお昼休みにも通いやすいスケジュールです。</p></div>
+ </div>
+</div></section>
+
+<div class="sp">
+ <div class="im"><img src="p2.jpg" alt="スタジオ全景"><img src="p1.jpg" alt="マットでのストレッチ"><img src="p3.jpg" alt="姿勢を整える手元"></div>
+ <div class="tx"><div class="ttl" style="margin-bottom:24px"><div class="n">02</div><h2><span class="en">STUDIO</span>光の入るスタジオ</h2></div>
+  <h3>木の床と大きな窓。<br>深呼吸したくなる場所で。</h3>
+  <p>レッスンのあとは、ハーブティーとタオルをご用意しています。手ぶらでお越しいただけます。</p>
+  <p>更衣室・パウダールーム完備。メイク直しをしてからお出かけいただけます。</p></div>
+</div>
+
+<section><div class="wrap">
+ <div class="ttl"><div class="n">03</div><h2><span class="en">LESSON</span>レッスンと料金</h2></div>
+ <div class="ls">
+  <div class="l"><span class="tg">はじめての方</span><h3>体験レッスン</h3><div class="m">50 MIN</div><p>カウンセリングと、基本の動きを体験。マシンの使い方からお伝えします。</p><div class="y">¥3,300<small>税込</small></div></div>
+  <div class="l"><h3>グループレッスン</h3><div class="m">50 MIN · MAX 4</div><p>月4回のプラン。同じ時間に通う仲間がいるので続けやすいレッスンです。</p><div class="y">¥19,800<small>／月4回・税込</small></div></div>
+  <div class="l"><h3>プライベート</h3><div class="m">50 MIN · 1 ON 1</div><p>完全マンツーマン。目的やからだの状態に合わせて、内容を組み立てます。</p><div class="y">¥9,900<small>／1回・税込</small></div></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="n">04</div><h2><span class="en">SCHEDULE</span>週間スケジュール</h2></div>
+ <div class="sc"><table>
+  <tr><th></th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr>
+  <tr><td>7:00</td><td class="on"><b>BASIC</b>朝のリセット</td><td></td><td class="on"><b>BASIC</b>朝のリセット</td><td></td><td class="on"><b>BASIC</b>朝のリセット</td><td></td><td></td></tr>
+  <tr><td>12:00</td><td></td><td class="on"><b>FLOW</b>お昼の50分</td><td></td><td class="on"><b>FLOW</b>お昼の50分</td><td></td><td class="on"><b>BASIC</b>はじめての方</td><td class="on"><b>BASIC</b>はじめての方</td></tr>
+  <tr><td>19:30</td><td class="on"><b>FLOW</b>夜のほぐし</td><td class="on"><b>BASIC</b>夜のほぐし</td><td class="on"><b>FLOW</b>夜のほぐし</td><td class="on"><b>BASIC</b>夜のほぐし</td><td></td><td></td><td></td></tr>
+ </table><p class="note">※プライベートレッスンは上記以外の時間もご予約いただけます。</p></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="n">05</div><h2><span class="en">VOICE</span>通っている方の声</h2></div>
+ <div class="vc">
+  <div>運動は苦手でしたが、少人数なので周りを気にせず質問できます。朝のレッスンが一日のスイッチになっています。<span>30代・会社員</span></div>
+  <div>デスクワークで固まっていた肩まわりを、動かすのが楽しみになりました。スタジオの雰囲気も好きです。<span>40代・事務職</span></div>
+  <div>産後に久しぶりの運動として始めました。無理のない内容を一緒に考えてくださるので安心です。<span>30代・主婦</span></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="ttl"><div class="n">06</div><h2><span class="en">Q&amp;A</span>よくあるご質問</h2></div>
+ <div class="faq">
+  <details><summary>運動経験がなくても大丈夫ですか？</summary><p>はい。はじめての方の多くが運動経験の少ない方です。体験レッスンで基本からお伝えします。</p></details>
+  <details><summary>持ち物はありますか？</summary><p>動きやすい服装と靴下をお持ちください。タオル・お水はスタジオでご用意しています。</p></details>
+  <details><summary>持病やけががあっても受けられますか？</summary><p>内容によりますので、ご予約前にご相談ください。必要に応じて、かかりつけの医師にもご確認をお願いしています。</p></details>
+ </div>
+</div></section>
+
+<div class="cta" id="cta"><div class="wrap"><h2>まずは50分、<br>からだを動かしてみませんか。</h2><p>体験レッスン ¥3,300（税込）｜当日のご入会で体験料を無料にしています。</p><a href="#cta">体験レッスンを予約する</a></div></div>
+<footer>※架空のお店のデモサイトです｜制作：Muse Web.　© courbe</footer>
+</body></html>
