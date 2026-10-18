@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sillage｜パーソナルスタイリングサロン 公式サイト（デモ）</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Zen+Old+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Sillage HP：上部ナビ＋左右分割のトップ、章ごとに白とグレージュを交互。LPとは別構成 */
+:root{--bg:#F4EFE9;--paper:#FBF8F4;--ink:#3B3330;--soft:#857772;--rose:#C49A98;--rose2:#EAD9D6;--line:#D9CEC5;--f-en:"Bodoni Moda",serif;--f-jp:"Zen Old Mincho",serif;--f-ui:"Zen Kaku Gothic New",sans-serif;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-jp);line-height:2;letter-spacing:.05em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0;font-weight:500}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.ln{display:inline-block;white-space:nowrap}
+/* nav */
+.nav{position:sticky;top:0;z-index:9;background:rgba(251,248,244,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:72px}
+.logo{font-family:var(--f-en);font-size:26px;letter-spacing:.08em;line-height:1;margin-right:auto}.logo small{display:block;font-family:var(--f-ui);font-size:9px;letter-spacing:.32em;color:var(--soft);margin-top:4px}
+.nav a.m{font-family:var(--f-en);font-size:14px;letter-spacing:.14em;color:var(--soft)}
+.nav a.m:hover{color:var(--ink)}
+.rsv{font-family:var(--f-ui);font-size:12px;letter-spacing:.14em;background:var(--ink);color:#fff;padding:10px 20px;border-radius:999px}
+/* top split */
+.top{display:grid;grid-template-columns:1.05fr 1fr;min-height:620px}
+.top .tx{display:flex;flex-direction:column;justify-content:center;padding:70px 6vw;background:var(--bg)}
+.top .e{font-family:var(--f-en);font-style:italic;font-size:clamp(40px,5.4vw,72px);line-height:1.05;color:var(--ink)}
+.top .e span{color:var(--rose)}
+.top h1{font-size:clamp(18px,1.9vw,22px);letter-spacing:.16em;margin:26px 0 18px;line-height:1.9}
+.top p{color:var(--soft);font-size:14px;max-width:420px}
+.top .ph{background:url(hero.jpg) 72% 20%/cover}
+/* heading */
+.h{text-align:center;margin-bottom:54px}
+.h .e{font-family:var(--f-en);font-size:clamp(30px,3.4vw,44px);letter-spacing:.06em;line-height:1.1}
+.h p{font-size:14px;letter-spacing:.2em;color:var(--rose);margin-top:8px}
+section{padding:110px 0}
+.alt{background:var(--bg)}
+/* concept */
+.concept{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.concept blockquote{margin:0;font-size:clamp(20px,2.3vw,27px);line-height:2.1;letter-spacing:.12em;border-left:1px solid var(--rose);padding-left:34px}
+.concept .body p{font-size:15px;color:var(--soft);margin-bottom:16px}
+.concept .body .sig{font-family:var(--f-en);font-style:italic;color:var(--ink);font-size:18px}
+/* service cards */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.sv{background:var(--paper);border:1px solid var(--line);padding:30px 22px 26px;display:flex;flex-direction:column;text-align:center}
+.sv .no{font-family:var(--f-en);font-size:13px;letter-spacing:.2em;color:var(--rose)}
+.sv h3{font-size:18px;letter-spacing:.1em;margin:10px 0 12px}
+.sv p{font-size:13px;color:var(--soft);line-height:1.9;margin-bottom:18px}
+.sv .yen{margin-top:auto;font-family:var(--f-en);font-size:26px;border-top:1px solid var(--line);padding-top:14px}.sv .yen small{font-family:var(--f-ui);font-size:11px;color:var(--soft);margin-left:4px}
+.svc-more{text-align:center;margin-top:34px}
+.lk{font-family:var(--f-ui);font-size:13px;letter-spacing:.16em;border-bottom:1px solid var(--ink);padding-bottom:4px}
+/* profile */
+.prof{display:grid;grid-template-columns:420px 1fr;gap:64px;align-items:center}
+.prof .im{aspect-ratio:4/5;background:url(stylist.jpg) 62% center/cover}
+.prof .role{font-family:var(--f-ui);font-size:12px;letter-spacing:.2em;color:var(--rose)}
+.prof h3{font-size:28px;letter-spacing:.16em;margin:6px 0 2px}
+.prof .en{font-family:var(--f-en);font-style:italic;color:var(--soft)}
+.prof p{font-size:15px;color:var(--soft);margin:22px 0}
+.prof dl{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;font-size:13px;margin:0;border-top:1px solid var(--line);padding-top:18px}
+.prof dt{font-family:var(--f-ui);color:var(--rose);letter-spacing:.1em}.prof dd{margin:0;color:var(--soft)}
+/* works */
+.nums{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:56px}
+.nums div{padding:30px 10px}.nums div+div{border-left:1px solid var(--line)}
+.nums b{display:block;font-family:var(--f-en);font-weight:400;font-size:46px;line-height:1.1}.nums span{font-size:13px;color:var(--soft);letter-spacing:.12em}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.case{background:var(--paper);padding:28px 26px}
+.case .tg{font-family:var(--f-ui);font-size:11px;letter-spacing:.14em;color:#fff;background:var(--rose);padding:2px 10px}
+.case h3{font-size:17px;letter-spacing:.08em;margin:14px 0 10px;line-height:1.7}
+.case .ba{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px;color:var(--soft)}
+.case .ba b{font-family:var(--f-en);font-weight:400;color:var(--ink);font-style:italic}
+/* news */
+.news{max-width:860px;margin:0 auto;list-style:none;padding:0}
+.news li a{display:grid;grid-template-columns:110px 110px 1fr auto;gap:18px;align-items:center;padding:20px 6px;border-bottom:1px solid var(--line);font-size:15px}
+.news .d{font-family:var(--f-en);color:var(--soft);letter-spacing:.08em}
+.news .c{font-family:var(--f-ui);font-size:11px;letter-spacing:.12em;text-align:center;border:1px solid var(--line);padding:2px 0}
+.news li a::after{content:"→";font-family:var(--f-en);color:var(--rose)}
+/* contact */
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.ct table{width:100%;border-collapse:collapse;font-size:14px}
+.ct th,.ct td{text-align:left;padding:14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.ct th{font-family:var(--f-ui);font-weight:400;color:var(--rose);width:120px;letter-spacing:.1em}
+.ct .bx{background:var(--paper);padding:40px 34px;text-align:center}
+.ct .bx h3{font-size:20px;letter-spacing:.12em}.ct .bx p{font-size:13px;color:var(--soft);margin:10px 0 24px}
+.btn{display:flex;align-items:center;justify-content:center;border-radius:999px;padding:15px 20px;font-family:var(--f-ui);font-size:14px;letter-spacing:.14em;margin-top:12px}
+.btn.dark{background:var(--ink);color:#fff}.btn.line{border:1px solid var(--ink)}
+footer{text-align:center;padding:40px 20px 30px;font-family:var(--f-ui);font-size:11px;letter-spacing:.1em;color:var(--soft);background:var(--bg)}
+footer .logo{display:inline-block;margin:0 0 14px}
+footer .demo{display:block;margin-top:8px}
+@media(max-width:900px){.svc{grid-template-columns:1fr 1fr}.prof{grid-template-columns:1fr}.prof .im{max-width:420px}}
+@media(max-width:760px){
+ .nav a.m{display:none}.nav .wrap{height:62px}
+ .top{grid-template-columns:1fr}.top .ph{height:420px;order:-1}.top .tx{padding:44px 22px 56px}
+ section{padding:76px 0}.concept,.ct,.cases{grid-template-columns:1fr;gap:34px}
+ .concept blockquote{padding-left:20px}
+ .svc{grid-template-columns:1fr}
+ .nums b{font-size:28px;white-space:nowrap}.nums span{font-size:11px;letter-spacing:.04em}
+ .ct .bx h3{font-size:17px;letter-spacing:.06em}
+ .news li a{grid-template-columns:auto auto;gap:6px 12px}.news li a span:nth-child(3){grid-column:1/-1}.news li a::after{display:none}
+}
+</style></head><body>
+
+<nav class="nav"><div class="wrap">
+ <a class="logo" href="#top">Sillage<small>PERSONAL STYLING</small></a>
+ <a class="m" href="#concept">Concept</a><a class="m" href="#service">Service</a><a class="m" href="#profile">Profile</a><a class="m" href="#works">Works</a><a class="m" href="#news">News</a>
+ <a class="rsv" href="#contact">ご予約</a>
+</div></nav>
+
+<div class="top" id="top">
+ <div class="tx">
+  <div class="e">Dress for<br><span>the woman</span><br>you are now.</div>
+  <h1><span class="ln">いまの私に、いちばん似合う服を。</span></h1>
+  <p>骨格・パーソナルカラー・クローゼット。大人の女性の「似合う」を、理由といっしょにお伝えするスタイリングサロンです。</p>
+ </div>
+ <div class="ph" role="img" aria-label="アトリエでほほえむ女性"></div>
+</div>
+
+<section id="concept"><div class="wrap">
+ <div class="h"><div class="e">Concept</div><p>コンセプト</p></div>
+ <div class="concept">
+  <blockquote>流行より、<br>「あなたらしさ」が<br>香るように。</blockquote>
+  <div class="body">
+   <p>サロン名の Sillage（シヤージュ）は、フランス語で「すれ違ったあとに残る香り」のこと。</p>
+   <p>服は、その人の印象を静かに残すもの。年齢や暮らしが変わっても、自分を好きでいられる装いを、一緒に見つけていきます。</p>
+   <p class="sig">— Sillage Personal Styling</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="alt" id="service"><div class="wrap">
+ <div class="h"><div class="e">Service</div><p>メニューと料金</p></div>
+ <div class="svc">
+  <div class="sv"><div class="no">01</div><h3>骨格診断</h3><p>体のラインに合う素材・形・丈を知り、スタイルアップの基本をつかみます。</p><div class="yen">¥16,500<small>税込</small></div></div>
+  <div class="sv"><div class="no">02</div><h3>パーソナルカラー</h3><p>顔色が明るく見える色と、似合う色みのメイクをご提案します。</p><div class="yen">¥19,800<small>税込</small></div></div>
+  <div class="sv"><div class="no">03</div><h3>クローゼット診断</h3><p>ご自宅のお洋服で、すぐに使える着回しコーデをつくります。</p><div class="yen">¥27,500<small>税込</small></div></div>
+  <div class="sv"><div class="no">04</div><h3>買い物同行</h3><p>ご予算内で、似合う理由のある一着を一緒に選びます。</p><div class="yen">¥33,000<small>税込</small></div></div>
+ </div>
+ <div class="svc-more"><a class="lk" href="index.html">トータルプランを見る（LPページ）</a></div>
+</div></section>
+
+<section id="profile"><div class="wrap">
+ <div class="prof">
+  <div class="im" role="img" aria-label="スタイリストのポートレート"></div>
+  <div>
+   <div class="role">STYLIST</div>
+   <h3>白石 澪</h3><div class="en">Mio Shiraishi</div>
+   <p>アパレルの販売・バイヤーとして12年。「似合う服がわからない」という声に多く出会い、独立しました。診断の結果だけでなく、毎日の暮らしで着られる服選びを大切にしています。</p>
+   <dl><dt>資格</dt><dd>骨格診断アナリスト／パーソナルカラーアナリスト</dd><dt>得意</dt><dd>大人のきれいめカジュアル・お仕事服</dd><dt>好きなもの</dt><dd>古着のレース、朝の珈琲</dd></dl>
+  </div>
+ </div>
+</div></section>
+
+<section class="alt" id="works"><div class="wrap">
+ <div class="h"><div class="e">Works &amp; Voices</div><p>実績とお客さまの声</p></div>
+ <div class="nums"><div><b>1,200+</b><span>ご相談数</span></div><div><b>86%</b><span>リピート・ご紹介</span></div><div><b>30–50s</b><span>中心のお客さま</span></div></div>
+ <div class="cases">
+  <div class="case"><span class="tg">骨格診断</span><h3>「着ない服」が半分に。朝の支度が5分に</h3><div class="ba"><b>Before</b><span>体型を隠すゆったり服ばかり</span><b>After</b><span>ハリのある素材で、すっきり見える形に</span></div></div>
+  <div class="case"><span class="tg">パーソナルカラー</span><h3>避けていたピンクが、いちばん似合う色に</h3><div class="ba"><b>Before</b><span>黒・グレーで無難にまとめていた</span><b>After</b><span>青みのくすみピンクで顔色が明るく</span></div></div>
+  <div class="case"><span class="tg">買い物同行</span><h3>予算3万円で、着回せる5着がそろった</h3><div class="ba"><b>Before</b><span>店員さんにすすめられると断れない</span><b>After</b><span>理由がわかるから、自分で選べるように</span></div></div>
+ </div>
+</div></section>
+
+<section id="news"><div class="wrap">
+ <div class="h"><div class="e">News</div><p>お知らせ・ブログ</p></div>
+ <ul class="news">
+  <li><a href="#news"><span class="d">2026.10.12</span><span class="c">お知らせ</span><span>11月のご予約受付を開始しました</span></a></li>
+  <li><a href="#news"><span class="d">2026.10.03</span><span class="c">ブログ</span><span>秋のジャケット、似合う丈の選び方</span></a></li>
+  <li><a href="#news"><span class="d">2026.09.21</span><span class="c">ブログ</span><span>くすみピンクを上品に着る3つのコツ</span></a></li>
+  <li><a href="#news"><span class="d">2026.09.08</span><span class="c">お知らせ</span><span>オンライン相談の時間帯を広げました</span></a></li>
+ </ul>
+</div></section>
+
+<section class="alt" id="contact"><div class="wrap">
+ <div class="h"><div class="e">Contact</div><p>ご予約・お問い合わせ</p></div>
+ <div class="ct">
+  <table>
+   <tr><th>営業時間</th><td>10:00–19:00（完全予約制）</td></tr>
+   <tr><th>定休日</th><td>火曜日・不定休</td></tr>
+   <tr><th>場所</th><td>都内のアトリエ（ご予約時にご案内します）</td></tr>
+   <tr><th>お支払い</th><td>各種クレジットカード・電子マネー</td></tr>
+  </table>
+  <div class="bx">
+   <h3>まずは初回カウンセリングから</h3>
+   <p>60分 ¥5,500（税込）｜オンラインでも承ります</p>
+   <a class="btn dark" href="#contact">LINEで予約する</a>
+   <a class="btn line" href="#contact">メールで問い合わせる</a>
+  </div>
+ </div>
+</div></section>
+
+<footer><a class="logo" href="#top">Sillage<small>PERSONAL STYLING</small></a><span>© Sillage</span><span class="demo">※架空のお店のデモサイトです｜制作：Muse Web.</span></footer>
+</body></html>

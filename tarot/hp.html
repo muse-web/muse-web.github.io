@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcane Rose｜タロット鑑定サロン 公式サイト（デモ）</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Italiana&family=Shippori+Mincho+B1:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Arcane Rose HP：アイボリー地にミッドナイトの帯。中央の大きなアーチ写真のトップ、カード型のメニュー一覧。LPとは別構成 */
+:root{--night:#1E2240;--night2:#2B3057;--gold:#C3A36A;--gold2:#E6D3A8;--rose:#D9AAA9;--ivory:#F7F2EA;--paper:#FFFCF6;--ink:#2A2B45;--soft:#6A6880;--line:#E1D6C3;--f-en:"Cinzel",serif;--f-it:"Italiana",serif;--f-jp:"Shippori Mincho B1",serif;--f-ui:"Zen Kaku Gothic New",sans-serif;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--f-jp);line-height:2;letter-spacing:.06em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0;font-weight:400}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.ln{display:inline-block;white-space:nowrap}
+/* nav */
+.nav{text-align:center;padding:26px 20px 18px;border-bottom:1px solid var(--line);background:var(--paper)}
+.logo{font-family:var(--f-en);font-size:24px;letter-spacing:.3em;margin-right:-.3em;color:var(--night)}
+.logo small{display:block;font-family:var(--f-ui);font-size:9px;letter-spacing:.34em;color:var(--soft);margin:2px -.34em 0 0}
+.menu-bar{display:flex;justify-content:center;gap:34px;margin-top:16px;font-family:var(--f-en);font-size:12px;letter-spacing:.24em;color:var(--soft)}
+.menu-bar a:hover{color:var(--gold)}
+/* top */
+.top{padding:70px 0 90px;text-align:center;background:radial-gradient(ellipse at 50% 40%,#FFFDF8 0,var(--ivory) 70%)}
+.arch{width:min(520px,86vw);aspect-ratio:4/5;margin:0 auto;border-radius:300px 300px 4px 4px;border:1px solid var(--gold);padding:9px}
+.arch div{width:100%;height:100%;border-radius:300px 300px 2px 2px;background:url(hero.jpg) 66% center/cover}
+.top .it{font-family:var(--f-it);font-size:clamp(30px,3.6vw,44px);color:var(--gold);margin-top:34px;line-height:1.2}
+.top h1{font-size:clamp(19px,2vw,23px);letter-spacing:.18em;margin-top:14px;line-height:1.9}
+.top p{font-size:14px;color:var(--soft);margin-top:14px}
+/* heading */
+section{padding:110px 0}
+.h{text-align:center;margin-bottom:56px}
+.h .en{font-family:var(--f-en);font-size:clamp(24px,2.8vw,34px);letter-spacing:.24em;margin-right:-.24em;color:var(--night)}
+.h p{font-size:14px;letter-spacing:.2em;color:var(--gold);margin-top:6px}
+.h::after{content:"✦";display:block;color:var(--gold);font-size:12px;margin-top:10px}
+.dark{background:var(--night);color:var(--ivory)}.dark .h .en{color:var(--gold2)}.dark .h p{color:var(--rose)}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about .im{aspect-ratio:1/1;background:url(room.jpg) center/cover;border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:-12px}
+.about h3{font-size:clamp(20px,2.2vw,26px);letter-spacing:.14em;line-height:1.9;margin-bottom:22px}
+.about p{font-size:15px;color:var(--soft);margin-bottom:14px}
+/* menu tiles */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tile{background:var(--night2);border:1px solid rgba(195,163,106,.6);padding:7px}
+.tile .i{border:1px solid rgba(195,163,106,.3);padding:28px 16px 24px;text-align:center;height:100%;display:flex;flex-direction:column}
+.tile .r{font-family:var(--f-en);color:var(--gold2);font-size:22px;letter-spacing:.1em}
+.tile h3{font-size:17px;letter-spacing:.1em;margin:10px 0 6px}
+.tile p{font-size:13px;color:#B9B6C9;line-height:1.85;margin-bottom:16px}
+.tile .y{margin-top:auto;font-family:var(--f-en);font-size:20px;color:var(--gold2);border-top:1px dashed rgba(195,163,106,.4);padding-top:12px}
+.tile .y small{font-family:var(--f-ui);font-size:11px;color:#B9B6C9;margin-left:4px}
+.more{text-align:center;margin-top:34px}.more a{font-family:var(--f-ui);font-size:13px;letter-spacing:.16em;color:var(--gold2);border-bottom:1px solid var(--gold);padding-bottom:3px}
+/* reader */
+.reader{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center}
+.reader .im{aspect-ratio:4/5;border-radius:4px 200px 4px 4px;background:url(hold.jpg) center 40%/cover}
+.reader .role{font-family:var(--f-en);font-size:12px;letter-spacing:.3em;color:var(--gold)}
+.reader h3{font-size:27px;letter-spacing:.2em;margin:6px 0 0}
+.reader .it{font-family:var(--f-it);color:var(--soft);font-size:20px}
+.reader p{font-size:15px;color:var(--soft);margin:22px 0}
+.reader ul{list-style:none;padding:0;margin:0;font-size:14px;border-top:1px solid var(--line)}
+.reader li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:18px}.reader li b{font-weight:400;font-family:var(--f-ui);font-size:12px;color:var(--gold);letter-spacing:.12em;width:84px;flex:none;padding-top:2px}
+/* voices */
+.stat{display:flex;justify-content:center;gap:60px;margin-bottom:54px;text-align:center}
+.stat b{display:block;font-family:var(--f-en);font-weight:400;font-size:40px;color:var(--night)}.stat span{font-size:13px;color:var(--soft)}
+.vs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.v{background:var(--paper);border:1px solid var(--line);padding:30px 26px;text-align:center}
+.v .s{color:var(--gold);letter-spacing:.3em;font-size:12px}
+.v p{font-size:15px;line-height:2;margin:12px 0 14px;text-align:left}
+.v .w{font-family:var(--f-ui);font-size:12px;color:var(--soft);letter-spacing:.1em}
+/* column */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.col .ph{aspect-ratio:3/2;overflow:hidden;border-radius:2px}.col .ph img{width:100%;height:100%;object-fit:cover}
+.col .d{font-family:var(--f-en);font-size:12px;letter-spacing:.14em;color:var(--gold);margin-top:14px}
+.col h3{font-size:16px;letter-spacing:.06em;line-height:1.8;margin-top:4px}
+/* contact */
+.ct{max-width:820px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ctb{border:1px solid var(--gold);padding:8px}.ctb .i{border:1px solid rgba(195,163,106,.35);padding:34px 26px;text-align:center;height:100%}
+.ctb h3{font-size:19px;letter-spacing:.12em}.ctb p{font-size:13px;color:#B9B6C9;margin:10px 0 22px}
+.btn{display:flex;justify-content:center;align-items:center;padding:14px 20px;font-family:var(--f-ui);font-size:14px;letter-spacing:.16em;border-radius:2px}
+.btn.gold{background:linear-gradient(135deg,#E6D3A8,#C2A36C);color:var(--night)}.btn.ol{border:1px solid var(--gold);color:var(--gold2)}
+.info{max-width:820px;margin:34px auto 0;font-size:13px;color:#B9B6C9;text-align:center;line-height:2}
+.disc{font-family:var(--f-ui);font-size:11px;color:#B9B6C9;text-align:center;margin-top:18px}
+footer{text-align:center;padding:30px 20px;font-family:var(--f-ui);font-size:11px;letter-spacing:.1em;color:var(--soft)}
+@media(max-width:900px){.tiles{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){
+ .menu-bar{gap:16px;font-size:10px;letter-spacing:.14em;flex-wrap:wrap}
+ section{padding:76px 0}.top{padding:44px 0 70px}
+ .about,.reader,.vs,.cols,.ct{grid-template-columns:1fr;gap:30px}
+ .tiles{grid-template-columns:1fr}.stat{gap:26px}.stat b{font-size:30px}
+ .h .en{letter-spacing:.16em;margin-right:-.16em}
+ .about h3{font-size:18px;letter-spacing:.08em}.about h3 .ln{white-space:normal}
+ .top h1{font-size:18px;letter-spacing:.1em}
+ .menu-bar{gap:10px 14px}
+}
+</style></head><body>
+
+<header class="nav">
+ <a class="logo" href="#top">ARCANE ROSE<small>TAROT READING SALON</small></a>
+ <nav class="menu-bar"><a href="#about">ABOUT</a><a href="#menu">MENU</a><a href="#reader">READER</a><a href="#voice">VOICE</a><a href="#column">COLUMN</a><a href="#contact">CONTACT</a></nav>
+</header>
+
+<div class="top" id="top">
+ <div class="arch"><div role="img" aria-label="キャンドルとタロットカード"></div></div>
+ <div class="it">Arcane Rose</div>
+ <h1><span class="ln">カードとともに、</span><span class="ln">心を整える時間を。</span></h1>
+ <p>オンライン鑑定・対面鑑定・メール鑑定</p>
+</div>
+
+<section id="about"><div class="wrap">
+ <div class="h"><div class="en">ABOUT</div><p>Arcane Rose について</p></div>
+ <div class="about">
+  <div class="im" role="img" aria-label="鑑定ルーム"></div>
+  <div>
+   <h3><span class="ln">占いは、答えをもらう場所ではなく、</span><br><span class="ln">自分の声を聴く場所。</span></h3>
+   <p>Arcane（アルカナ）はタロットカードの名前、Rose は咲いていく心のしるし。カードを手がかりに、言葉にしにくい気持ちを少しずつほどいていきます。</p>
+   <p>ミッドナイトブルーの鑑定ルームで、ハーブティーを片手にゆっくりお話ししましょう。</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="dark" id="menu"><div class="wrap">
+ <div class="h"><div class="en">MENU</div><p>鑑定メニュー</p></div>
+ <div class="tiles">
+  <div class="tile"><div class="i"><div class="r">I</div><h3>初回オンライン</h3><p>はじめての方に。30分で雰囲気をお試しいただけます。</p><div class="y">¥3,300<small>税込</small></div></div></div>
+  <div class="tile"><div class="i"><div class="r">II</div><h3>オンライン鑑定</h3><p>ビデオ通話・チャットで。30分 ¥5,500／60分</p><div class="y">¥9,900<small>税込</small></div></div></div>
+  <div class="tile"><div class="i"><div class="r">III</div><h3>対面鑑定</h3><p>鑑定ルームでゆったりと。60分 ¥11,000／90分</p><div class="y">¥15,400<small>税込</small></div></div></div>
+  <div class="tile"><div class="i"><div class="r">IV</div><h3>メール鑑定</h3><p>1テーマ。カードの写真つきで3日以内にお返事します。</p><div class="y">¥4,400<small>税込</small></div></div></div>
+ </div>
+ <div class="more"><a href="index.html">メニューの詳細を見る（LPページ）</a></div>
+</div></section>
+
+<section id="reader"><div class="wrap">
+ <div class="reader">
+  <div class="im" role="img" aria-label="カードを手にする鑑定士"></div>
+  <div>
+   <div class="role">READER</div>
+   <h3>紗月 ルナ</h3><div class="it">Luna Satsuki</div>
+   <p>会社員として働きながらタロットを学び、のべ2,000人以上のお話をうかがってきました。「話してよかった」と思っていただける、やさしい時間を大切にしています。</p>
+   <ul>
+    <li><b>鑑定歴</b><span>10年</span></li>
+    <li><b>得意な相談</b><span>恋愛・お仕事・人間関係・これからの暮らし方</span></li>
+    <li><b>使うカード</b><span>ウェイト版タロット／オラクルカード</span></li>
+   </ul>
+  </div>
+ </div>
+</div></section>
+
+<section id="voice" style="background:var(--paper)"><div class="wrap">
+ <div class="h"><div class="en">VOICE</div><p>お客さまの声</p></div>
+ <div class="stat"><div><b>2,000+</b><span>のべ鑑定数</span></div><div><b>72%</b><span>リピートの方</span></div><div><b>★4.9</b><span>平均満足度</span></div></div>
+ <div class="vs">
+  <div class="v"><div class="s">✦ ✦ ✦ ✦ ✦</div><p>話すうちに涙が出てしまいましたが、最後は笑顔で帰れました。気持ちが整理できたのが何よりうれしいです。</p><div class="w">30代・会社員</div></div>
+  <div class="v"><div class="s">✦ ✦ ✦ ✦ ✦</div><p>オンラインでも、カードを画面で丁寧に見せてくださって安心しました。言葉選びがとてもやさしいです。</p><div class="w">40代・主婦</div></div>
+  <div class="v"><div class="s">✦ ✦ ✦ ✦ ✦</div><p>転職に迷っていた時期に何度か。決めるのは自分、と背中を押してもらえる感じが好きです。</p><div class="w">30代・営業職</div></div>
+ </div>
+</div></section>
+
+<section id="column"><div class="wrap">
+ <div class="h"><div class="en">COLUMN</div><p>コラム・お知らせ</p></div>
+ <div class="cols">
+  <a class="col" href="#column"><div class="ph"><img src="stone.jpg" alt=""></div><div class="d">2026.10.14</div><h3>月の満ち欠けと、心の整え方</h3></a>
+  <a class="col" href="#column"><div class="ph"><img src="online.jpg" alt=""></div><div class="d">2026.10.02</div><h3>はじめてのオンライン鑑定、準備しておくと良いこと</h3></a>
+  <a class="col" href="#column"><div class="ph"><img src="hold.jpg" alt=""></div><div class="d">2026.09.20</div><h3>「太陽」のカードが教えてくれること</h3></a>
+ </div>
+</div></section>
+
+<section class="dark" id="contact"><div class="wrap">
+ <div class="h"><div class="en">CONTACT</div><p>ご予約・お問い合わせ</p></div>
+ <div class="ct">
+  <div class="ctb"><div class="i"><h3>LINEでご予約</h3><p>空き状況の確認から、そのままご予約いただけます。</p><a class="btn gold" href="#contact">LINEで予約する</a></div></div>
+  <div class="ctb"><div class="i"><h3>メールでお問い合わせ</h3><p>メニューのご相談など、お気軽にどうぞ。</p><a class="btn ol" href="#contact">メールを送る</a></div></div>
+ </div>
+ <p class="info">受付時間 11:00–22:00（オンラインは23:00まで）｜対面鑑定は都内の鑑定ルーム（ご予約時にご案内）</p>
+ <p class="disc">※鑑定は、ご自身の気持ちを整理するためのヒントです。医療・法律・お金に関するご判断は、各専門家にご相談ください。</p>
+</div></section>
+
+<footer>※架空のお店のデモサイトです｜制作：Muse Web.　© Arcane Rose</footer>
+</body></html>
