@@ -4,8 +4,8 @@
 <meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aube｜完全予約制フェイシャルサロン（デモ）</title><meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet"><style>
-:root{--bg:#FBF6F2;--card:#FFFCF9;--soft:#F6EAE7;--accent:#B97F86;--line:#EAD5D3;--mark:#F1D6D9;--gold:#BFA06A;--ink:#5E4247;--inksoft:#8C7074;--f-jp:"Shippori Mincho","Hiragino Mincho ProN",serif;--f-en:"Cormorant Garamond",serif;color-scheme:light}
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Kiwi+Maru:wght@300;400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet"><style>
+:root{--bg:#FAF6F2;--card:#FFFFFF;--soft:#F5EEE8;--accent:#C98F94;--line:#EBCFCF;--mark:#F3D5D5;--gold:#C9A77A;--ink:#574B47;--inksoft:#8A7D78;--f-jp:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;--f-en:"Josefin Sans",sans-serif;color-scheme:light}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-jp);line-height:2;letter-spacing:.05em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}a{color:inherit}h1,h2,h3{font-weight:500;margin:0;text-wrap:balance}p{margin:0}
@@ -41,7 +41,7 @@ nav.menu{display:flex;gap:26px;font-size:13px}nav.menu a{text-decoration:none;co
 .pill{font-size:12px;letter-spacing:.1em;padding:3px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
 .pill.fill{background:var(--mark);border-color:transparent}
 .hero-visual{position:relative;min-width:0}
-.hero-visual .ph{border-radius:26px;overflow:hidden;box-shadow:0 34px 60px -34px rgba(0,0,0,.35);animation:sp-pop .9s cubic-bezier(.34,1.5,.64,1) .2s both,floatA 7s ease-in-out 1.2s infinite}
+.hero-visual .ph{border-radius:28px;overflow:hidden;box-shadow:0 34px 60px -34px rgba(0,0,0,.35);animation:sp-pop .9s cubic-bezier(.34,1.5,.64,1) .2s both,floatA 7s ease-in-out 1.2s infinite}
 .hero-visual .ph img{aspect-ratio:16/11;object-fit:cover;object-position:50% 30%;width:100%}
 .chip{position:absolute;z-index:3;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 16px;font-size:12px;letter-spacing:.12em;white-space:nowrap;box-shadow:0 10px 20px -12px rgba(0,0,0,.35);animation:sp-word .7s cubic-bezier(.34,1.7,.64,1) both,sp-wiggle 3.6s ease-in-out infinite;animation-delay:var(--d,0s),calc(var(--d,0s) + 1.4s)}
 .chip.m{background:var(--mark);border-color:transparent}
@@ -60,30 +60,30 @@ section.alt{background:var(--soft)}
 .worry li::after{content:"";position:absolute;left:24px;top:50%;width:5px;height:9px;margin-top:-7px;border:solid var(--accent);border-width:0 2px 2px 0;rotate:45deg}
 .answer{margin-top:34px;text-align:center;font-size:clamp(18px,2.4vw,22px);letter-spacing:.1em}
 .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:28px 24px;display:grid;gap:12px;align-content:start;transition:translate .5s cubic-bezier(.34,1.6,.64,1)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:28px 24px;display:grid;gap:12px;align-content:start;transition:translate .5s cubic-bezier(.34,1.6,.64,1)}
 .card:hover{translate:0 -6px}
 .num{font-family:var(--f-en);font-size:34px;color:var(--accent);line-height:1}
 .card h3{font-size:18px;letter-spacing:.08em}.card p{font-size:14px;color:var(--inksoft);line-height:1.95}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
-.split img{border-radius:26px;aspect-ratio:1/1;object-fit:cover;width:100%;box-shadow:0 30px 50px -30px rgba(0,0,0,.35)}
+.split img{border-radius:28px;aspect-ratio:1/1;object-fit:cover;width:100%;box-shadow:0 30px 50px -30px rgba(0,0,0,.35)}
 .split .tx{display:grid;gap:16px}.split h3{font-size:24px;letter-spacing:.08em;line-height:1.7}.split p{font-size:15px;color:var(--inksoft)}
 .gal{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px}
-.gal figure{margin:0;position:relative;border-radius:26px;overflow:hidden;box-shadow:0 24px 40px -26px rgba(0,0,0,.35)}
+.gal figure{margin:0;position:relative;border-radius:28px;overflow:hidden;box-shadow:0 24px 40px -26px rgba(0,0,0,.35)}
 .gal img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover}
 .gal figcaption{position:absolute;left:14px;bottom:14px;background:var(--card);border-radius:999px;padding:3px 16px;font-size:12px;letter-spacing:.1em}
 @media(max-width:860px){.gal{grid-template-columns:1fr 1fr}.gal figure:first-child{grid-column:span 2}.gal figure:first-child img{aspect-ratio:4/3}}
 .price{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pc{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:28px 24px;display:grid;gap:10px;text-align:center;position:relative}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:28px 24px;display:grid;gap:10px;text-align:center;position:relative}
 .pc.rec{border:2px solid var(--accent)}
 .pc .badge{position:absolute;top:-14px;left:50%;translate:-50% 0;background:var(--accent);color:#fff;font-size:11px;letter-spacing:.14em;padding:3px 14px;border-radius:999px;white-space:nowrap}
 .pc h3{font-size:17px}.pc .yen{font-family:var(--f-en);font-size:34px;color:var(--ink);line-height:1.3}.pc .yen small{font-size:13px;font-family:var(--f-jp)}
 .pc p{font-size:13px;color:var(--inksoft)}.pc .tm{font-size:12px;color:var(--accent);letter-spacing:.12em}
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:f}
-.st{background:var(--card);border-radius:26px;padding:24px 20px;border:1px solid var(--line);display:grid;gap:8px;position:relative}
+.st{background:var(--card);border-radius:28px;padding:24px 20px;border:1px solid var(--line);display:grid;gap:8px;position:relative}
 .st::before{counter-increment:f;content:"STEP " counter(f);font-family:var(--f-en);font-size:12px;letter-spacing:.24em;color:var(--accent)}
 .st h3{font-size:16px}.st p{font-size:13px;color:var(--inksoft);line-height:1.9}
 .voice{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.vc{background:var(--card);border-radius:26px;padding:24px;border:1px solid var(--line);display:grid;gap:12px}
+.vc{background:var(--card);border-radius:28px;padding:24px;border:1px solid var(--line);display:grid;gap:12px}
 .vc .who{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--inksoft)}
 .vc .av{width:40px;height:40px;border-radius:50%;background:var(--mark);display:grid;place-items:center;font-family:var(--f-en);color:var(--accent)}
 .vc p{font-size:14px;line-height:1.95}
@@ -92,7 +92,7 @@ section.alt{background:var(--soft)}
 .faq details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 22px}
 .faq summary{cursor:pointer;font-size:15px;list-style:none;display:flex;gap:12px}.faq summary::before{content:"Q";font-family:var(--f-en);color:var(--accent)}
 .faq p{font-size:14px;color:var(--inksoft);margin-top:10px;padding-left:24px}
-.cta{text-align:center;display:grid;gap:22px;justify-items:center;background:var(--soft);border-radius:26px;padding:56px 24px;margin:0 20px}
+.cta{text-align:center;display:grid;gap:22px;justify-items:center;background:var(--soft);border-radius:28px;padding:56px 24px;margin:0 20px}
 .cta h2{font-size:clamp(22px,3vw,30px);letter-spacing:.1em;line-height:1.7}.cta p{font-size:14px;color:var(--inksoft)}
 .info{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;max-width:640px;margin:0 auto;font-size:14px}
 .info dt{color:var(--accent);letter-spacing:.12em}.info dd{margin:0;color:var(--ink)}
@@ -100,14 +100,65 @@ footer{padding:48px 0 34px;text-align:center;font-size:12px;color:var(--inksoft)
 footer .demo{display:inline-block;margin:0 auto;background:var(--card);border:1px dashed var(--line);border-radius:999px;padding:4px 16px}
 .fixed{position:fixed;right:18px;bottom:18px;z-index:60}
 @media(max-width:860px){.hero .wrap,.split{grid-template-columns:1fr}.feat,.price,.voice{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.worry{grid-template-columns:1fr}.offer{left:10px}.hero{padding-top:24px}section{padding:64px 0}}
+
+/* ── kitone寄せ：まるい文字・ブラウンのボタン・ピンクの縁取りカード ── */
+h1,h2,h3,.answer,.split h3,.cta h2{font-family:"Kiwi Maru","Zen Maru Gothic",serif;font-weight:400;letter-spacing:.06em}
+body{letter-spacing:.04em;font-size:15px}
+.en,.eyebrow,.head .en{font-family:"Josefin Sans",sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:.24em}
+.eyebrow{font-size:12px;color:var(--accent)}.head .en{font-size:12px}
+header{background:color-mix(in srgb,var(--bg) 90%,transparent)}
+.logo b{font-family:"Josefin Sans";font-weight:300;letter-spacing:.32em;font-size:20px}.logo small{font-size:9px}
+nav.menu a{color:var(--ink);font-size:13px}
+.btn{background:#5A4A45;box-shadow:none;font-family:"Zen Maru Gothic";font-weight:700;letter-spacing:.12em;padding:17px 38px}
+.btn:hover{background:#463935;translate:0 -2px;scale:1}
+.btn.sm{padding:10px 22px;font-size:12px}
+.hero{padding:64px 0 96px;position:relative}
+.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.55;letter-spacing:.04em}
+.mk{background:linear-gradient(transparent 60%,var(--mark) 60%,var(--mark) 94%,transparent 94%) no-repeat 0 0/100% 100%}
+.lead{font-size:15px;color:var(--ink);line-height:2.2}
+.pill{font-size:12px;font-weight:500;padding:5px 16px;border:1px solid var(--accent);color:var(--ink);background:transparent}
+.pill.fill{background:var(--mark);border-color:var(--mark)}
+.hero-visual .ph{border-radius:28px;border:8px solid #fff;outline:1.5px solid var(--line);box-shadow:0 30px 60px -36px rgba(87,75,71,.45);animation:rise-in 1s ease .2s both}
+.chip{font-family:"Zen Maru Gothic";font-weight:500;border:1px solid var(--line);background:#fff;animation:rise-in .8s ease both;animation-delay:var(--d,0s)}
+.chip.m{background:var(--mark)}
+.offer{border-radius:22px;border:1.5px solid var(--line);box-shadow:0 18px 36px -24px rgba(87,75,71,.45);animation:rise-in .8s ease .5s both}
+.offer b{font-family:"Josefin Sans";font-weight:200;font-size:44px;color:var(--ink);letter-spacing:-.01em;line-height:1.1}
+.offer b::after{content:"円";font-family:"Zen Maru Gothic";font-size:13px;margin-left:4px}
+.stamp{position:absolute;right:-28px;bottom:-34px;z-index:4;width:118px;height:118px;border-radius:50%;background:var(--mark);display:grid;place-content:center;text-align:center;gap:2px;box-shadow:0 0 0 6px var(--bg),0 0 0 7.5px var(--accent);rotate:-8deg}
+.stamp b{font-size:14px;font-weight:700;letter-spacing:.08em}.stamp i{font-style:normal;font-family:"Josefin Sans";font-size:9px;letter-spacing:.24em;color:var(--inksoft)}
+.scrollcap{position:absolute;left:50%;bottom:22px;translate:-50% 0;display:grid;justify-items:center;width:44px;padding:10px 0 8px;border-radius:999px;background:#fff;border:1px solid var(--line);text-decoration:none;font-family:"Josefin Sans";color:var(--inksoft)}
+.scrollcap small{font-size:9px;letter-spacing:.14em}.scrollcap b{font-weight:300;font-size:18px;line-height:1;animation:floatA 2.4s ease-in-out infinite}
+section{padding:96px 0}section.alt{background:var(--soft)}
+.head{margin-bottom:52px}.head h2{font-size:clamp(26px,3.4vw,38px);letter-spacing:.06em}
+.head p{color:var(--ink)}
+.worry li{border-radius:22px;border:1.5px solid var(--line);font-weight:500}
+.worry li::before{background:var(--mark)}
+.card,.pc,.st,.vc{border:1.5px solid var(--line);border-radius:28px;box-shadow:none}
+.card{padding:32px 28px}.card:hover{translate:0 -4px}
+.num{font-family:"Josefin Sans";font-weight:200;font-size:54px;color:var(--ink);letter-spacing:-.02em}
+.card h3,.st h3,.pc h3{font-size:18px}
+.card p,.st p,.pc p,.split p,.faq p{color:var(--inksoft)}
+.split img,.gal figure{border-radius:28px;border:8px solid #fff;outline:1.5px solid var(--line);box-shadow:none}
+.gal figcaption{font-family:"Zen Maru Gothic";font-weight:500;background:#5A4A45;color:#fff;font-size:11px;padding:4px 14px}
+.pc .yen{font-family:"Josefin Sans";font-weight:200;font-size:48px;letter-spacing:-.02em}
+.pc.rec{border:2px solid var(--accent)}.pc .badge{background:var(--accent);font-weight:700}
+.st::before{font-family:"Josefin Sans";font-weight:300}
+.vc .av{font-family:"Josefin Sans";font-weight:300;color:var(--ink)}.stars{color:var(--accent)}
+.faq details{border-radius:22px;border:1.5px solid var(--line)}
+.faq summary{font-weight:500}.faq summary::before{font-family:"Josefin Sans";font-weight:300}
+.cta{background:#fff;border:1.5px solid var(--line);border-radius:36px;max-width:1040px;margin:0 auto}
+.info dt{font-weight:500}
+@keyframes rise-in{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:none}}
+.rv.in{animation:rise-in .9s cubic-bezier(.22,1,.36,1) backwards;animation-delay:calc(var(--i,0) * .08s)}
+@media(max-width:860px){.stamp{right:-6px;bottom:-40px;width:96px;height:96px}.stamp b{font-size:12px}.hero{padding-bottom:110px}.offer b{font-size:36px}}
 </style></head>
 <body>
-<header><div class="wrap"><a class="logo" href="#"><b>Aube</b><small>FACIAL SALON</small></a><nav class="menu"><a href="#worry">お悩み</a><a href="#feature">選ばれる理由</a><a href="#menu">メニュー</a><a href="#flow">流れ</a><a href="#faq">Q&A</a></nav><a class="btn sm line" href="#reserve">初回のご予約</a></div></header>
+<header><div class="wrap"><a class="logo" href="#"><b>Aube</b><small>FACIAL SALON</small></a><nav class="menu"><a href="#worry">お悩み</a><a href="#feature">選ばれる理由</a><a href="#menu">メニュー</a><a href="#flow">流れ</a><a href="#faq">Q&A</a></nav><a class="btn sm" href="#reserve">初回のご予約</a></div></header>
 <main>
 <section class="hero"><div class="wrap">
- <div class="hero-text"><span class="eyebrow rv">PRIVATE FACIAL SALON</span><h1 class="rv">朝の肌が、<br><span class="mk">好きになる。</span></h1><p class="lead rv">完全予約制・おひとりさま空間のフェイシャルサロン。<br>ゆらぎやすい大人の肌を、手のぬくもりで整えます。</p><div class="tags rv"><span class="pill fill">初回限定</span><span class="pill">完全個室</span><span class="pill">当日メイクOK</span></div><div class="rv"><a class="btn line" href="#reserve">初回のご予約はこちら</a></div></div>
- <div class="hero-visual"><div class="ph"><img src="../img/ig_esthe_face.jpg" alt="施術後のツヤ肌"></div><span class="chip" style="top:-14px;left:12%;--d:0.60s">しっとり</span><span class="chip m" style="top:18%;right:-10px;--d:0.75s">くすみケア</span><span class="chip" style="bottom:22%;right:-14px;--d:0.90s">♡ 完全個室</span><div class="offer"><small>初回体験 90分</small><s>12,100円</s><b>7,700円</b></div></div>
-</div></section>
+ <div class="hero-text"><span class="eyebrow rv">Private facial salon</span><h1 class="rv">朝の肌が、<br><span class="mk">好きになる。</span></h1><p class="lead rv">完全予約制・おひとりさま空間のフェイシャルサロン。<br>ゆらぎやすい大人の肌を、手のぬくもりで整えます。</p><div class="tags rv"><span class="pill fill">初回限定</span><span class="pill">完全個室</span><span class="pill">当日メイクOK</span></div><div class="rv"><a class="btn" href="#reserve">初回のご予約はこちら</a></div></div>
+ <div class="hero-visual"><div class="ph"><img src="../img/ig_esthe_face.jpg" alt="施術後のツヤ肌"></div><span class="chip" style="top:-14px;left:12%;--d:0.60s">しっとり</span><span class="chip m" style="top:18%;right:-10px;--d:0.75s">くすみケア</span><span class="chip" style="bottom:22%;right:-14px;--d:0.90s">♡ 完全個室</span><div class="offer"><small>初回体験 90分</small><s>12,100円</s><b>7,700円</b></div><span class="stamp"><b>完全予約制</b><i>ONE TO ONE</i></span></div>
+</div><a class="scrollcap" href="#worry" aria-label="下へ"><small>scroll</small><b>↓</b></a></section>
 <section class="alt" id="worry"><div class="wrap"><div class="head rv"><span class="en">WORRY</span><h2>こんなお悩みありませんか？</h2></div><ul class="worry" style="padding:0;margin:0 auto"><li class="rv">夕方になると、肌がくすんで見える</li><li class="rv">乾燥なのに、ニキビもできる</li><li class="rv">エイジングケア、何から始めればいい？</li><li class="rv">自分へのご褒美の時間がほしい</li></ul><p class="answer rv">その肌の声、<span class="mk">丁寧に聴かせてください。</span></p></div></section>
 <section id="feature"><div class="wrap"><div class="head rv"><span class="en">FEATURE</span><h2>Aubeが選ばれる3つの理由</h2></div><div class="feat"><div class="card rv"><span class="num">01</span><h3>肌診断からはじめる</h3><p>毎回、肌の状態を見て触れて確かめてから、その日のケアを決めます。</p></div><div class="card rv"><span class="num">02</span><h3>ハンドの心地よさ</h3><p>機械に頼りすぎず、手のぬくもりで血色とハリを引き出します。</p></div><div class="card rv"><span class="num">03</span><h3>おうちケアまで</h3><p>ご自宅でのスキンケアも、無理なく続けられる方法をご提案します。</p></div></div></div></section>
 <section class="alt" id="concept"><div class="wrap split"><img class="rv" src="../img/ig_facial.jpg" alt="フェイシャル施術の様子"><div class="tx rv"><span class="eyebrow">CONCEPT</span><h3>がんばる毎日の、<br>小さな夜明けに。</h3><p>Aube（オーブ）はフランス語で「夜明け」。忙しい毎日の中で、ほっと深呼吸できる時間をおつくりしたい。そんな想いから、ひとりひとりの肌と向き合う小さなサロンを開きました。</p></div></div></section>
@@ -116,7 +167,7 @@ footer .demo{display:inline-block;margin:0 auto;background:var(--card);border:1p
 <section id="flow"><div class="wrap"><div class="head rv"><span class="en">FLOW</span><h2>ご来店の流れ</h2></div><div class="flow"><div class="st rv"><h3>ご予約</h3><p>LINEから24時間ご予約いただけます。</p></div><div class="st rv"><h3>カウンセリング</h3><p>お肌のお悩みをゆっくりお聞きします。</p></div><div class="st rv"><h3>施術</h3><p>肌に合わせたケアで整えます。</p></div><div class="st rv"><h3>アフターケア</h3><p>おうちケアのアドバイスをお渡しします。</p></div></div></div></section>
 <section class="alt" id="voice"><div class="wrap"><div class="head rv"><span class="en">VOICE</span><h2>お客さまの声</h2><p>※個人の感想です</p></div><div class="voice"><div class="vc rv"><span class="stars">★★★★★</span><p>肌に触れる手がとにかく優しくて、終わったあと鏡を見るのが楽しみになりました。</p><div class="who"><span class="av">M</span>30代・会社員</div></div><div class="vc rv"><span class="stars">★★★★★</span><p>押し売りがなく、自分のペースで通えるのがうれしいです。</p><div class="who"><span class="av">K</span>40代・主婦</div></div><div class="vc rv"><span class="stars">★★★★★</span><p>個室なので周りを気にせず、本当にリラックスできました。</p><div class="who"><span class="av">A</span>20代・看護師</div></div></div></div></section>
 <section id="faq"><div class="wrap"><div class="head rv"><span class="en">Q&amp;A</span><h2>よくあるご質問</h2></div><div class="faq"><details class="rv soft" open><summary>勧誘はありますか？</summary><p>しつこい勧誘は一切いたしません。安心してお越しください。</p></details><details class="rv soft"><summary>施術後にメイクはできますか？</summary><p>はい。パウダールームとアメニティをご用意しています。</p></details><details class="rv soft"><summary>敏感肌でも大丈夫ですか？</summary><p>カウンセリングで肌状態を確認し、刺激の少ないケアをご提案します。</p></details></div></div></section>
-<section id="reserve"><div class="cta rv"><span class="eyebrow">RESERVATION</span><h2>まずは、初回体験から。</h2><p>ご予約はLINEで24時間受け付けています。</p><a class="btn line" href="#reserve">初回のご予約はこちら</a></div>
+<section id="reserve"><div class="cta rv"><span class="eyebrow">RESERVATION</span><h2>まずは、初回体験から。</h2><p>ご予約はLINEで24時間受け付けています。</p><a class="btn" href="#reserve">初回のご予約はこちら</a></div>
 <div class="wrap" style="margin-top:56px"><dl class="info rv soft"><dt>営業時間</dt><dd>10:00〜20:00（最終受付18:30）</dd><dt>定休日</dt><dd>不定休</dd><dt>アクセス</dt><dd>駅から徒歩5分（ご予約時にお伝えします）</dd><dt>お支払い</dt><dd>現金・各種カード・QR決済</dd></dl></div></section>
 </main>
 <footer><span class="demo">※架空のお店のデモサイトです｜制作：Muse Web.</span><span>© Aube</span></footer>
