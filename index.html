@@ -101,6 +101,12 @@ h1,h2,h3{font-weight:600;text-wrap:balance}button,input,select,textarea{font:inh
 .scroll i{width:1px;height:46px;background:linear-gradient(var(--gold) 50%,transparent 50%) 0 0/1px 200%;animation:sc 2.2s linear infinite}@keyframes sc{to{background-position:0 -92px}}
 
 /* ---------- marquee ---------- */
+.phrase{padding:88px 24px 92px;text-align:center;background:var(--paper)}
+.phrase .ln{display:flex;align-items:center;justify-content:center;gap:18px;max-width:560px;margin:0 auto;color:var(--gold);font-size:11px}
+.phrase .ln::before,.phrase .ln::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--goldl))}.phrase .ln::after{background:linear-gradient(270deg,transparent,var(--goldl))}
+.phrase p{font-family:"Cormorant Garamond";font-style:italic;font-weight:300;font-size:clamp(30px,4.4vw,52px);color:var(--plum);letter-spacing:.01em;line-height:1.25;margin:34px 0 14px}
+.phrase small{display:block;font-size:13px;letter-spacing:.32em;color:var(--soft);margin-bottom:34px}
+@media(max-width:600px){.phrase{padding:64px 16px 68px}.phrase small{font-size:12px;letter-spacing:.2em}}
 .mq{border-block:1px solid var(--line);overflow:hidden;padding:20px 0;background:var(--paper)}
 .mq div{display:flex;width:max-content;gap:56px;animation:mq 46s linear infinite;font-family:"Cormorant Garamond";font-style:italic;font-weight:300;font-size:30px;color:var(--plum)}
 .mq span{display:flex;align-items:center;gap:56px}.mq span::after{content:"✦";font-style:normal;font-size:12px;color:var(--gold)}
@@ -363,6 +369,8 @@ footer p{line-height:1.9}
 <a class="scroll" href="#about" aria-label="下へスクロール"><i></i>Scroll</a>
 </section>
 
+
+<section class="phrase" aria-label="Muse Web.の想い"><div class="ln rv">✦</div><p class="rv">Beauty, thoughtfully designed.</p><small class="rv">サロンの“らしさ”を、かたちに。</small><div class="ln rv">✦</div></section>
 
 <section class="about" id="about"><div class="wrap g">
  <div class="pic rv"><img src="assets/owner.jpg" alt="窓辺でデザインの作業をする様子（イメージ）" width="1200" height="1200" loading="lazy" decoding="async"><span class="cap">つくる人も、オーナー。</span></div>
